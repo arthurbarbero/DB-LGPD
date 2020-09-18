@@ -1,0 +1,109 @@
+:root {
+    --color-header: #C2A7C2;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html, 
+body {
+    height: 100%;
+}
+header {
+    background-color: var(--color-header);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 600px;
+    padding: 7px 45px 20px 15px;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+    background-color:  #fff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input {
+    border-radius: 2px;
+    background-color: #fff;
+    border: 0 rgba(0,0,0,.2);
+    width: 527px;
+    height: 20px;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+#icon_search {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    outline: 0px;
+}
+.nav-menu {
+    width: 300px;
+}
+
+button {
+    border: none;
+}
+#btn-login{
+    width: 125px;
+    height: 40px;
+    background-color: #D8CEDF;
+    color: #4D4D65;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    margin-left: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#btn-cadastre-se{
+    width: 125px;
+    height: 40px;
+    background-color: #4D4D65;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-menu{
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+}
+
+.nav-footer{
+    background-color: #4D4D65;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    display: flex;
+    color: #fff;    
+}
+
+.info-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    margin-left: 150px;
+}
+#chat{
+    width: 10%;
+    margin-top: 30px;
+    padding-left: 150px;
+    /* margin-left: 30px; */
+}
+#icon-footer {
+    width: 40px;
+    height: 40px;
+}
