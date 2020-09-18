@@ -44,7 +44,7 @@ Quando o dado é anonimizado mas é dada a possibilidade de voltar a sua forma o
 Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos os dados no Back-end, trazendo formas seguras de conexão ao Banco de dados pessoais e mantendo a criptografia dos dados em todas as etapas de transferência entre aplicações. O Backlog abaixo demonstra os processos que realizaremos para a criação deste projeto:
 
 
-## [Front-end: :computer:](https://github.com/arthurbarbero/DB-LGPD/master/front-end/)
+## [Front-end: :computer:](https://github.com/arthurbarbero/DB-LGPD/tree/master/front-end/)
 
   Criaremos uma interface básica utilizando as bases do desenvolvimento front-end, HTML, CSS e JavaScript, contendo as  seguintes funcionalidades:
   
@@ -65,7 +65,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   Em toda a aplicação, será disponibilizada parte reservada para as políticas de privacidade contando de forma transparente a finalidade dos dados que persistimos em nossos bancos de dados.
   
   
-## [Back-end: :page_with_curl:](https://github.com/arthurbarbero/DB-LGPD/master/back-end)
+## [Back-end: :page_with_curl:](https://github.com/arthurbarbero/DB-LGPD/tree/master/back-end)
   
   Com a captação de dados vinda do front-end, a aplicação rest em python utilizando a framework Flask nos dará as funcionalidades necessárias para realizar as validações e comunicações com os Bancos de Dados de forma segura e concisa com base nas seguintes rotas:
   
@@ -82,7 +82,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   A pedido do usuário, o back-end realizará a exclusão permanente dos dados em posse referente ao cliente, lembrando que neste quesito não abordaremos todos os riscos que uma empresa necessitaria para realizar as devidas exclusões atendendo todos os tópicos da LGPD que abordam a deleção de dados pessoais, somente uma forma de exclusão simples;
   
   
-## [Banco de dados: :books:](https://github.com/arthurbarbero/DB-LGPD/master/bd)
+## [Banco de dados: :books:](https://github.com/arthurbarbero/DB-LGPD/tree/master/bd)
   
   Moldado às necessidades acima, realizaremos a criação de um banco de dados exclusivo para o tratamento de dados pessoais. Além de serem armazenados somente dados criptografados, o acesso ao banco também será protegido via chaves SSH, permitindo apenas que a aplicação do Back-end realize leituras e escreva neste banco de dados.
   
