@@ -25,7 +25,7 @@ Essa lei surge com a finalidade de proteger direitos fundamentais, como:
 - A livre iniciativa, a livre concorrência e a defesa do consumidor;
 - Direitos humanos: o livre desenvolvimento da personalidade, dignidade e o exercício da cidadania pelas pessoas naturais.
 
-Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo [Info.md :book:](https://github.com/arthurbarbero/DB-LGPD/blob/master/Info.md) 
+Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo [Info.md :book:](/Info.md) 
 
 Resolução
 ----------------
