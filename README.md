@@ -7,6 +7,7 @@
 - Gabriel Augusto Landim;
 - José Vinicius Ferreira Santana;
 - Nayara Lorrane Santos Silveira;
+- Stephanie Costa Vale Moura;
 - Thyago Odorico Garcia.
 
 # Objetivos: :dart:
