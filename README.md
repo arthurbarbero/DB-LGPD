@@ -50,19 +50,19 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   
 ###  - Cadastro;
   
-    Este cadastro irá simular a interação de um cliente que queria ter acesso ao site para realizar suas compras, para que então, de forma segura e encriptada, estes dados serão enviados para o back-end e assim suas demais funcionalidades de login e perfil possam ser acessadas
+  Este cadastro irá simular a interação de um cliente que queria ter acesso ao site para realizar suas compras, para que então, de forma segura e encriptada, estes dados serão enviados para o back-end e assim suas demais funcionalidades de login e perfil possam ser acessadas
   
 ###  - Login;
   
-    Com o cadastro finalizado, o usuário poderá realizar o login de forma segura onde seus dados armazenados em browser estão sendo utilizados apenas para os fins respeitados pelas políticas de privacidade estipuladas pela aplicação e encriptadas, além de poder acessar outras áreas do site.
+  Com o cadastro finalizado, o usuário poderá realizar o login de forma segura onde seus dados armazenados em browser estão sendo utilizados apenas para os fins respeitados pelas políticas de privacidade estipuladas pela aplicação e encriptadas, além de poder acessar outras áreas do site.
   
 ###  - Perfil;
   
-    Após logar-se, a página de perfil pessoal demonstra quais dados estão sendo utilizados pela aplicação de forma transparente.
+  Após logar-se, a página de perfil pessoal demonstra quais dados estão sendo utilizados pela aplicação de forma transparente.
   
 ###  - Página de privacidade.
   
-    Em toda a aplicação, será disponibilizada parte reservada para as políticas de privacidade contando de forma transparente a finalidade dos dados que persistimos em nossos bancos de dados.
+  Em toda a aplicação, será disponibilizada parte reservada para as políticas de privacidade contando de forma transparente a finalidade dos dados que persistimos em nossos bancos de dados.
   
   
 ## [Back-end: :page_with_curl:](https://github.com/arthurbarbero/DB-LGPD/master/back-end)
@@ -71,15 +71,15 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   
 ###  - Rota de cadastro;
 
-    Para completarmos o ciclo do cadastro, receberemos os dados da etapa do cadastro do front-end e realizaremos as devidas validações, protegendo contra ataques e informações maliciosas, assim realizaremos a criptografia dos dados e inserimos no respectivo Banco de Dados;
+  Para completarmos o ciclo do cadastro, receberemos os dados da etapa do cadastro do front-end e realizaremos as devidas validações, protegendo contra ataques e informações maliciosas, assim realizaremos a criptografia dos dados e inserimos no respectivo Banco de Dados;
     
 ###  - Rota de Login;
 
-    Quando do acesso do cliente à aplicação, o back-end realizará a validação da existência do usuário ao Banco de dados, com todas as seguranças necessárias;
+  Quando do acesso do cliente à aplicação, o back-end realizará a validação da existência do usuário ao Banco de dados, com todas as seguranças necessárias;
   
 ###  - Rota de Esclusão;
 
-    A pedido do usuário, o back-end realizará a exclusão permanente dos dados em posse referente ao cliente, lembrando que neste quesito não abordaremos todos os riscos que uma empresa necessitaria para realizar as devidas exclusões atendendo todos os tópicos da LGPD que abordam a deleção de dados pessoais, somente uma forma de exclusão simples;
+  A pedido do usuário, o back-end realizará a exclusão permanente dos dados em posse referente ao cliente, lembrando que neste quesito não abordaremos todos os riscos que uma empresa necessitaria para realizar as devidas exclusões atendendo todos os tópicos da LGPD que abordam a deleção de dados pessoais, somente uma forma de exclusão simples;
   
   
 ## [Banco de dados: :books:](https://github.com/arthurbarbero/DB-LGPD/master/bd)
@@ -88,7 +88,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   
 ###  - Criação do banco:
   
-    Utilizaremos de um banco não relacional mongo com as devidas configurações básicas de tunelamento via SSH.
+  Utilizaremos de um banco não relacional mongo com as devidas configurações básicas de tunelamento via SSH.
   
   
 ####  Para mais detalhes de como iniciar cada serviço separadamente, clique nos tópicos acima ou navegue pelas pastas deste repositório.
