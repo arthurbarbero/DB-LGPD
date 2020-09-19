@@ -1,16 +1,29 @@
 import os
-from flask import current_app as app , make_response
 from werkzeug.wrappers import Response
-from flask_pymongo import PyMongo
+
+from mongoengine import connect
+
 
 class DBConnect:
-        
-    def getDB():
+    def __init__(self, app):
+        self.app = app
+
+    def __call__(self, environ, start_response):
         try:
-            app.config["MONGO_URI"] = "mongodb://localhost:27017/pessoais"
-            db = PyMongo(app)
-            return db
+            connect(
+                db=os.getenv('MONGO_DATABASE'),
+                host=os.getenv('MONGO_HOST'),
+                port=int(os.getenv('MONGO_PORT')) if os.getenv('MONGO_PORT') else None,
+                username=os.getenv('MONGO_USERNAME'),
+                password=os.getenv('MONGO_PASSWORD'),
+            )
+            
+            print("Connection to mongo succeeded")
+            return self.app(environ, start_response)
 
         except Exception as error:
             res = Response('Connection to mongo failed', mimetype='text/plain', status=501)
-            return make_response(res)
+            return res(environ, start_response)
+
+            
+            

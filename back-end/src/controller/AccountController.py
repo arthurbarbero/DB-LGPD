@@ -1,20 +1,22 @@
 from flask import Blueprint, Response, request
-from config.db import DBConnect
+from src.model.account import Account as ModelAccount
 from bson import json_util
 
 bp = Blueprint('account', __name__, url_prefix='/account')
 
 @bp.route('/register', methods=['POST', 'GET'])
 def register():
-    mongo = DBConnect.getDB()
 
     if request.method == 'POST':
         obj = request.json
 
+        try:
+            account = ModelAccount(**obj)
+            return Response(account.to_json(), mimetype="application/json", status=200)
 
-        registro = mongo.db.dadospessoais.insert_one(obj)
+        except Exception as error:
+            return Response('{"error":"Falha na inserção do usuário"} ', mimetype='application/json', status=500)
 
-        return Response(json_util.dumps(registro.inserted_id), mimetype="application/json", status=200)
     else:
-        return Response('{"error":"Method not allowed, use POST"', mimetype="application/json", status=404)
+        return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=404)
     
