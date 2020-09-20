@@ -1,0 +1,9 @@
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#divisao {
+    width: 50%;
+    background-color: #D8CEDF;
+}
