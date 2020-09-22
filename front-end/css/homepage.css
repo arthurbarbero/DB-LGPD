@@ -1,9 +1,44 @@
-#container {
+
+.flex-container {
+    width: 80%;
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 150px;
 }
 
-#divisao {
-    width: 50%;
-    background-color: #D8CEDF;
+.conteudo {
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 30px;
+    width: 250px;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+.img {
+    border-radius: 3px;
+    width: 85%;
+    height: 200px;
+    background-color: #C4C4C4;
+}
+
+.container-text {
+    width: 85%;
+    height: 80px;
+    background-color: #C4C4C4;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt {
+    width: 80%;
+    height: 15px;
+    background: #4D4D65;
+    margin-top: 10px;
 }
