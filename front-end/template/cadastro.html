@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="../css/cad-style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <form id="search">
+          <input type="text" placeholder="Busque o que você deseja ">
+          <button type="submit">
+          <div id="icon">
+              <img id="icon_search" src="/DB-LGPD/front-end/icons/search.svg" alt="busca">
+          </div>
+           </button>
+      </form> 
+      <div class="nav-menu">
+          <button id="btn-login" type="input">Login</button>
+          <button id="btn-cadastre-se" type="input">Cadastre-se</button>
+      </div>
+  </header>
+    <box>
+      <br />
+      <h1 class="cad">Cadastre-se</h1>
+      <br />
+        <form class="register-form">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="nome" value="" placeholder="Nome" />
+              </div>
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="sobrenome" value="" placeholder="Sobrenome" />
+              </div>
+            </div>
+            <div class="row">
+              <div class = "col">
+                <input class="campo solid w-100" type="text" name="email" value="" placeholder="Endereço de E-mail" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="password" name="senha" value="" placeholder="Senha" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="countrycode" value="" placeholder="+55" />
+              </div>
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="celular" value="" placeholder="Número de Celular" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="dtnascimento" value="" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Data de Nascimento" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="cpf" value="" placeholder="CPF" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid w-100" type="text" name="rua" value="" placeholder="Rua" />
+              </div>
+              <div class="col">
+                <input class="campo solid bairro w-100" type="text" name="bairro" value="" placeholder="Bairro" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid cep w-100" type="text" name="cep" value="" placeholder="CEP" />
+              </div>
+              <div class="col">
+                <input class="campo solid numero w-100" type="text" name="numero" value="" placeholder="Número" />
+              </div>
+              <div class="col">
+                <input class="campo solid uf w-100" type="text" name="uf" value="" placeholder="UF" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input class="campo solid cidade w-100" type="text" name="cidade" value="" placeholder="Cidade" />
+              </div>
+              <div class="col">
+                <input class="campo solid complemento w-100" type="text" name="compl" value="" placeholder="Complemento" />
+              </div>
+            </div>
+            <button class="btn btcad" style="margin-top: 14px; margin-left: 35%" type="submit">Cadastrar</button>
+          </div>
+        </form>
+    </box>
+    <footer class="nav-footer">
+      <div class="info-footer">
+          <p>Termos e condições</p>
+          <p>Como protegemos sua privacidade</p>
+          <p>Contato</p>
+          <p>Sobre</p>
+      </div>
+      <div id="chat">
+          <img id="icon-footer" src="/DB-LGPD/front-end/icons/message.svg" alt="chat">
+      </div>
+  </footer>
+  </body>
+</html>
