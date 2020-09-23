@@ -24,6 +24,7 @@ Com o objetivo de iniciar e nivelar os conhecimentos realizamos algumas tarefas 
 - Home Page Mock. :heavy_check_mark:
 - Rota de cadastro simples. :heavy_check_mark:
 
+Tag - [Entrega 1](https://github.com/arthurbarbero/DB-LGPD/tree/Entrega-1)
 
 ### Sprint 2 - 21/09 A 04/10:
 
