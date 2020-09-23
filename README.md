@@ -10,7 +10,49 @@
 - Stephanie Costa Vale Moura;
 - Thyago Odorico Garcia.
 
-# Objetivos: :dart:
+## Entregas:
+
+Alta prioridade = :red_circle:
+Média prioridade = :yellow_circle:
+Baixa prioridade = :large_blue_circle:
+
+### Sprint 1 - 07/09 A 20/09:
+
+Com o objetivo de iniciar e nivelar os conhecimentos realizamos algumas tarefas básicas, desde a criação do repositório quanto da consolidação dos objetivos do projeto.
+
+- Start no Repositório. :heavy_check_mark:
+- Home Page Mock. :heavy_check_mark:
+- Rota de cadastro simples. :heavy_check_mark:
+
+
+### Sprint 2 - 21/09 A 04/10:
+
+Após a criação de um "boilerplate" para ambas as frentes, front e back-end, iremos focar esta entrega na produção de um fluxo de cadastro completo, com criptografia nas informações que são enviadas da captação até o Banco de Dados. Utilizaremos criptografia simétrica no padrão AES-256 para o envio das informações do front-end para o back-end, assim como a decriptação, validação dos dados e nova criptografia simétrica no mesmo padrão, com outra chave para a persistência no banco.
+
+- Sign-up Page; (Front-end) :large_blue_circle:
+- Criptografia no envio dos dados; (Front-end) :red_circle:
+- Criação de classe de criptografia; (Back-end) :red_circle:
+- Validação dos dados; (Back-end) :yellow_circle:
+- Persistência dos dados; (BD) :large_blue_circle:
+
+
+### Sprint 3 - 05/10 A 18/10:
+
+Com a criptografia simétrica da aplicação realizada, esta entrega irá focar na finalização das demais páginas, rotas e nas formas de autenticação via SSH com o Banco de dados, tornando os dados pessoais ainda mais seguro, pois somente a aplicação com seu conjunto de chaves fará os acessos e modificações necessárias ao Banco de dados.
+
+- Autenticação via SSH com o Banco de dados pessoais; (BD) :red_circle:
+- Criação das rotas de Sign-in; (Back-end) :yellow_circle:
+- Criação da Sign-in Page; (Front-end) :yellow_circle:
+
+
+### Sprint 4 - 19/10 A 01/11:
+### Sprint 5 - 02/11 A 15/11:
+### Sprint 6 - 16/11 A 29/11:
+
+
+
+Objetivos: :dart:
+----------------
 
 Projeto designado à matéria de Segurança da Informação, lecionado pelo professor Eduardo Sakaue, trouxe consigo o desafio de implementar uma solução para tópicos abordados na Lei Geral de Proteção de Dados (LGPD), sendo assim estipulamos algumas dificuldades e chegamos a um tópico no qual apresentaremos seu conceito.
 
@@ -30,20 +72,22 @@ Para mais informações sobre a lei e tópicos deste trabalho, acessar o arquivo
 
 Resolução
 ----------------
-Dado o contexto acima, desenvolveremos uma aplicação simples com um CRUD (Create, Read, Update, Delete) com acesso a Bancos de dados voltada à resolver problemas de anonimização de uma aplicação de vendas online fictícia.
+Dado o contexto acima, desenvolveremos uma aplicação simples com um CRUD (Create, Read, Update, Delete) com acesso a Bancos de dados voltada a resolver problemas de anonimização de uma aplicação de vendas online fictícia.
 
 Para isto contaremos com a seguinte estrutura:
 
 ![Esboço](/images/esboço.png)
 
-Segundo a LGPD, a anonimização é atingida quando um dado relativo ao titular não possa ser identificado direta ou indiretamente, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento, sendo assim, sabemos que a total anonimização não traz nenhum benefício para a empresa em si, mas enquanto este dado estiver criptografado de maneira na qual os meios técnicos razoáveis forem aplicaveis, este dado é considerado seguro.
+Segundo a LGPD, a anonimização é atingida quando um dado relativo ao titular não possa ser identificado direta ou indiretamente, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento, sendo assim, sabemos que a total anonimização não traz nenhum benefício para a empresa em si, mas enquanto este dado estiver criptografado de maneira na qual os meios técnicos razoáveis forem aplicáveis, este dado é considerado seguro.
 
 Para nossos exemplos abaixo, existem partes importantes do processo na qual o dado é tratado e passam a ser dados pessoais novamente, tanto na captação do dado como em sua validação, trazendo os maiores perigos deste problema em suas etapas de validação e armazenamento. 
 
-Quando o dado é anonimizado mas é dada a possibilidade de voltar a sua forma original, visto as funcionalidades da aplicação, isto é considerado como pseudonimização, também retratado como válido desde que sejam cumpridas os demais artigos da Lei. 
+Quando o dado é anonimizado, mas é dada a possibilidade de voltar a sua forma original, visto as funcionalidades da aplicação, isto é considerado como pseudonimização, também retratado como válido desde que sejam cumpridos os demais artigos da Lei. 
 
 Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos os dados no Back-end, trazendo formas seguras de conexão ao Banco de dados pessoais e mantendo a criptografia dos dados em todas as etapas de transferência entre aplicações. O Backlog abaixo demonstra os processos que realizaremos para a criação deste projeto:
 
+Features
+-------------
 
 ## [Front-end: :computer:](https://github.com/arthurbarbero/DB-LGPD/tree/master/front-end/)
 
@@ -59,7 +103,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   
 ###  - Perfil;
   
-  Após logar-se, a página de perfil pessoal demonstra quais dados estão sendo utilizados pela aplicação de forma transparente.
+  Após o login, a página de perfil pessoal demonstra quais dados estão sendo utilizados pela aplicação de forma transparente.
   
 ###  - Página de privacidade.
   
@@ -68,7 +112,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
   
 ## [Back-end: :page_with_curl:](https://github.com/arthurbarbero/DB-LGPD/tree/master/back-end)
   
-  Com a captação de dados vinda do front-end, a aplicação rest em python utilizando a framework Flask nos dará as funcionalidades necessárias para realizar as validações e comunicações com os Bancos de Dados de forma segura e concisa com base nas seguintes rotas:
+  Com a captação de dados vinda do front-end, a aplicação Rest em Python utilizando a framework Flask nos dará as funcionalidades necessárias para realizar as validações e comunicações com os Bancos de Dados de forma segura e concisa com base nas seguintes rotas:
   
 ###  - Rota de cadastro;
 
@@ -78,7 +122,7 @@ Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos 
 
   Quando do acesso do cliente à aplicação, o back-end realizará a validação da existência do usuário ao Banco de dados, com todas as seguranças necessárias;
   
-###  - Rota de Esclusão;
+###  - Rota de Exclusão;
 
   A pedido do usuário, o back-end realizará a exclusão permanente dos dados em posse referente ao cliente, lembrando que neste quesito não abordaremos todos os riscos que uma empresa necessitaria para realizar as devidas exclusões atendendo todos os tópicos da LGPD que abordam a deleção de dados pessoais, somente uma forma de exclusão simples;
   
