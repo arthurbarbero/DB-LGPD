@@ -8,7 +8,8 @@
 html, 
 body {
     height: 100%;
-    /* width: 100%; */
+    width: 100%;
+    min-height: 100%;
 }
 header {
     background-color: var(--color-header);
@@ -84,7 +85,7 @@ button {
     bottom: 0;
     display: flex;
     color: #fff; 
-    margin-top: 50px;  
+    margin-top: 50px; 
 }
 
 .info-footer{
@@ -94,6 +95,7 @@ button {
     align-items: flex-end;
     margin-bottom: 25px;
     margin-left: 150px;
+    
 }
 
 #chat{
@@ -108,14 +110,17 @@ button {
 }
 
 .flex-conteiner{
+    display:flex;
+    flex-direction: column;
     justify-content: space-between;
     background: white;
     border-radius: 5px;
     /* padding: 15px; */
-    height: 450px;
+    height: 80vh;
     width: 488px;
     margin: 20px auto;
     box-shadow: 2px 2px 4px 1px black;
+    padding-top: 15px;
     
 }
 
