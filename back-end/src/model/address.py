@@ -6,8 +6,7 @@ from mongoengine import Document, EmailField, StringField, BooleanField, DateTim
 from src.model.utils.validations import Validator
 
 class Address(Document):
-    number = IntField()
-    zip_code = StringField(max_length=100)
-    city = StringField(max_length=100)
-    state = StringField(max_length=100)
+    data = StringField()
+    created_at = DateTimeField(default=datetime.utcnow)
+    updated_at = DateTimeField(default=datetime.utcnow)
     
