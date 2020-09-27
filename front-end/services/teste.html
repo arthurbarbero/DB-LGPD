@@ -13,8 +13,8 @@
 <body>
     <div style='justify-content: center; display: flex;'>
         <form id='cadastro' style='display:flex; flex-direction:column; min-width: 25%'>
-            <label for='name' >Nome:</label>
-            <input id="name" type="text" style="margin-bottom: 10px;" />
+            <label for='first_name' >Nome:</label>
+            <input id="first_name" type="text" style="margin-bottom: 10px;" />
 
             <label for='last_name'>Sobrenome:</label>
             <input id="last_name" style="margin-bottom: 10px;" type="text" />
@@ -60,7 +60,7 @@
 </body>
 <script type="text/javascript">
     var form = document.getElementById('cadastro')
-    var name = document.getElementById('name')
+    var first_name = document.getElementById('first_name')
 	var last_name= document.getElementById('last_name')
 	var email = document.getElementById('email')
 	var password= document.getElementById('password')
@@ -77,7 +77,7 @@
 
     const save = () => {
         var encrypted = encrypt(JSON.stringify({ 
-            name: name.value,
+            first_name: first_name.value,
             last_name: last_name.value,
             email: email.value,
             password: password.value,
