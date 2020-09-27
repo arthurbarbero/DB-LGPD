@@ -1,9 +1,26 @@
-const key = 'U2FsdGVkX1+h7dM5y1SLpVq/hDcf5ekhjrQDONSkHF50iLTMrL/sRQuxKDQp0sLFSGeG/i+kJACeFcWwDFX1QhDu0swataPmbDAgO2nozmikZNAmFR159xFakr0BfX/wPpHODJGkmYALhITwOS3My/f6qXlCD08v9VKE70SbZrX2uxq8YhAm1EGEluFHBO7bXXuSUvVMn3UtH4QziDGe9CC6smq8hJcl4Hsz0w0mVqZ8S11B9HwPdDxbqpWlpALQMbNrrlA3Qa8bfLTtell+xB3f5EtQ66RgTFY+68tP2FCfQ5NVCiaq6DAFcRpN7cVZwoMwY9nmhBSRvLnujB8kyaA81s7coOu+NXIRBHI3k4PSKgrx+JbkLuCszW7saruR'
+const key = CryptoJS.enc.Utf8.parse('noiSHuretaLembancILinOTaManCENvo');
 
-function encrypt(text) {
-    return CryptoJS.AES.encrypt(text, key).toString()
+function encrypt(msgString) {
+    var iv = CryptoJS.lib.WordArray.random(16);
+    var encrypted = CryptoJS.AES.encrypt(msgString, key, {
+        iv: iv
+    });
+    return iv.concat(encrypted.ciphertext).toString(CryptoJS.enc.Base64);
 }
 
-function decrypt(text) {
-    return CryptoJS.AES.decrypt(text, key).toString(CryptoJS.enc.Utf8);
+function decrypt(ciphertextStr) {
+    var ciphertext = CryptoJS.enc.Base64.parse(ciphertextStr);
+
+    // split IV and ciphertext
+    var iv = ciphertext.clone();
+    iv.sigBytes = 16;
+    iv.clamp();
+    ciphertext.words.splice(0, 4); // delete 4 words = 16 bytes
+    ciphertext.sigBytes -= 16;
+
+    // decryption
+    var decrypted = CryptoJS.AES.decrypt({ciphertext: ciphertext}, key, {
+        iv: iv
+    });
+    return decrypted.toString(CryptoJS.enc.Utf8);
 }

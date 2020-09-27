@@ -82,11 +82,13 @@
             email: email.value,
             password: password.value,
             birth_dt: birth_dt.value,
-            address: address.value,
-            number: number.value,
-            zip_code: zip_code.value,
-            city: city.value,
-            state: state.value
+            "address" : {
+                address: address.value,
+                number: number.value,
+                zip_code: zip_code.value,
+                city: city.value,
+                state: state.value
+            }
         }))
 
         var resposta = register(encrypted)
