@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script type="text/javascript" src="./cript.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id='cadastro'>
+            <input id="nome" type="text" />
+            <input id="email" type="text" />
+            <input id="password" type="password" />
+            <input type="submit" value="Submit" onclick="save()"/>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    var form = document.getElementById('cadastro');
+    var nome = document.getElementById('nome');
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+
+    const save = () => {
+        let obj = JSON.stringify({ nome: nome.value , email: email.value, password: password.value })
+        console.log('antes do cript', obj)
+
+        var encrypted = encrypt(obj)
+
+        console.log('depois do cript', encrypted)
+
+        var originalText  = decrypt(encrypted);
+
+        console.log('decriptado', originalText)
+    }
+
+</script> 
+</html>
