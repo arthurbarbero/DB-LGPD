@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./accountService.js"></script>
+    <script type="text/javascript" src="./../utils/cript.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style='justify-content: center; display: flex;'>
+        <form id='cadastro' style='display:flex; flex-direction:column; min-width: 25%'>
+            <label for='first_name' >Nome:</label>
+            <input id="first_name" type="text" style="margin-bottom: 10px;" />
+
+            <label for='last_name'>Sobrenome:</label>
+            <input id="last_name" style="margin-bottom: 10px;" type="text" />
+
+            <label for='email'>E-mail: </label>
+            <input id="email" style="margin-bottom: 10px;" type="text" />
+
+            <label for='password'> Senha: </label>
+            <input id="password" style="margin-bottom: 10px;" type="password" />
+
+            <label for='birth_dt'>Data de Nascimento: </label>
+            <input id="birth_dt" style="margin-bottom: 10px;" type="datetime-local" />
+            
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex-direction: column; margin-right: 10px; width: 100%">
+                    <label for='address'>Endereço: </label>
+                    <input id="address" style="margin-bottom: 10px;" type="text" />
+                </div>
+                <div style="display: flex; flex-direction: column; width: 4rem">
+                    <label for='number'>Número: </label>
+                    <input id="number" style="margin-bottom: 10px;" type="text" />
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex-direction: column; margin-right: 10px; width:8rem">
+                    <label for='zip_code'>CEP: </label>
+                    <input id="zip_code" style="margin-bottom: 10px;" type="text" />
+                </div>
+                <div style="display: flex; flex-direction: column; width: 100%">
+                    <label for='city'>Cidade: </label>
+                    <input id="city" style="margin-bottom: 10px;" type="text" />
+                </div>
+            </div>
+
+            <label for='state'>Estado: </label>
+            <input id="state" style="margin-bottom: 10px;" type="text" />
+
+
+            <input type="submit" value="Submit" onclick="save()"/>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    var form = document.getElementById('cadastro')
+    var first_name = document.getElementById('first_name')
+	var last_name= document.getElementById('last_name')
+	var email = document.getElementById('email')
+	var password= document.getElementById('password')
+	var birth_dt = document.getElementById('birth_dt')
+	var address = document.getElementById('address')
+    var number = document.getElementById('number')
+    var zip_code = document.getElementById('zip_code')
+    var city = document.getElementById('city')
+    var state = document.getElementById('state')
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+
+    const save = () => {
+        var encrypted = encrypt(JSON.stringify({ 
+            first_name: first_name.value,
+            last_name: last_name.value,
+            email: email.value,
+            password: password.value,
+            birth_dt: birth_dt.value,
+            "address" : {
+                address: address.value,
+                number: number.value,
+                zip_code: zip_code.value,
+                city: city.value,
+                state: state.value
+            }
+        }))
+
+        var resposta = register(encrypted)
+    }
+
+</script> 
+</html>
