@@ -163,7 +163,7 @@ button {
 
 #cel{
     font-size: medium;
-    width: 70%;
+    width: 35%;
     height: 30px;
     margin-top: 10px;
     border-style: none;
@@ -182,18 +182,12 @@ textarea:focus, input:focus {
     margin-top: 10px;
     border-style: none;
     border-bottom: solid 1px #BBB5B5;
+    color: #757575;
 }
 
-#dianasc{
-    width: 10%;
-}
-
-#mesnasc{
-    width: 45%;
-}
-
-#anonasc{
-    width: 15%;
+#nasc{
+    width: 26%;
+    font: 400 13.3333px arial;
 }
 
 #cpf{
