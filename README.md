@@ -10,48 +10,6 @@
 - Stephanie Costa Vale Moura;
 - Thyago Odorico Garcia.
 
-## Entregas:
-
-Alta prioridade = :red_circle:
-Média prioridade = :yellow_circle:
-Baixa prioridade = :large_blue_circle:
-
-### Sprint 1 - 07/09 A 20/09:
-
-Com o objetivo de iniciar e nivelar os conhecimentos realizamos algumas tarefas básicas, desde a criação do repositório quanto da consolidação dos objetivos do projeto.
-
-- Start no Repositório. :heavy_check_mark:
-- Home Page Mock. :heavy_check_mark:
-- Rota de cadastro simples. :heavy_check_mark:
-
-Tag - [Entrega 1](https://github.com/arthurbarbero/DB-LGPD/tree/Entrega-1)
-
-### Sprint 2 - 21/09 A 04/10:
-
-Após a criação de um "boilerplate" para ambas as frentes, front e back-end, iremos focar esta entrega na produção de um fluxo de cadastro completo, com criptografia nas informações que são enviadas da captação até o Banco de Dados. Utilizaremos criptografia simétrica no padrão AES-256 para o envio das informações do front-end para o back-end, assim como a decriptação, validação dos dados e nova criptografia simétrica no mesmo padrão, com outra chave para a persistência no banco.
-
-- Sign-up Page; (Front-end) :large_blue_circle:
-- Criptografia no envio dos dados; (Front-end) :red_circle:
-- Criação de classe de criptografia; (Back-end) :red_circle:
-- Validação dos dados; (Back-end) :yellow_circle:
-- Persistência dos dados; (BD) :large_blue_circle:
-
-
-### Sprint 3 - 05/10 A 18/10:
-
-Com a criptografia simétrica da aplicação realizada, esta entrega irá focar na finalização das demais páginas, rotas e nas formas de autenticação via SSH com o Banco de dados, tornando os dados pessoais ainda mais seguro, pois somente a aplicação com seu conjunto de chaves fará os acessos e modificações necessárias ao Banco de dados.
-
-- Autenticação via SSH com o Banco de dados pessoais; (BD) :red_circle:
-- Criação das rotas de Sign-in; (Back-end) :yellow_circle:
-- Criação da Sign-in Page; (Front-end) :yellow_circle:
-
-
-### Sprint 4 - 19/10 A 01/11:
-### Sprint 5 - 02/11 A 15/11:
-### Sprint 6 - 16/11 A 29/11:
-
-
-
 Objetivos: :dart:
 ----------------
 
@@ -86,6 +44,61 @@ Para nossos exemplos abaixo, existem partes importantes do processo na qual o da
 Quando o dado é anonimizado, mas é dada a possibilidade de voltar a sua forma original, visto as funcionalidades da aplicação, isto é considerado como pseudonimização, também retratado como válido desde que sejam cumpridos os demais artigos da Lei. 
 
 Por tanto, utilizaremos as formas de pseudonimização onde somente manipulamos os dados no Back-end, trazendo formas seguras de conexão ao Banco de dados pessoais e mantendo a criptografia dos dados em todas as etapas de transferência entre aplicações. O Backlog abaixo demonstra os processos que realizaremos para a criação deste projeto:
+
+## Entregas:
+
+Alta prioridade = :red_circle:
+Média prioridade = :yellow_circle:
+Baixa prioridade = :large_blue_circle:
+
+### Sprint 1 - 07/09 A 20/09:
+
+Com o objetivo de iniciar e nivelar os conhecimentos realizamos algumas tarefas básicas, desde a criação do repositório quanto da consolidação dos objetivos do projeto.
+
+- Start no Repositório. :heavy_check_mark:
+- Home Page Mock. :heavy_check_mark:
+- Rota de cadastro simples. :heavy_check_mark:
+
+Tag - [Entrega 1](https://github.com/arthurbarbero/DB-LGPD/tree/Entrega-1)
+
+### Sprint 2 - 21/09 A 04/10:
+
+Após a criação de um "boilerplate" para ambas as frentes, front e back-end, iremos focar esta entrega na produção de um fluxo de cadastro completo e na conexão segura com o Banco de Dados, com criptografia nas informações que são enviadas da captação até o Banco de Dados. Utilizaremos criptografia simétrica no padrão AES-256 para o envio das informações do front-end para o back-end, assim como a decriptação, validação dos dados e nova criptografia simétrica no mesmo padrão, com outra chave para a persistência no banco. Sua conexão será via autênticação SSH ao Banco de dados Mongo, assim somente a aplicação com seu conjunto de chaves fará os acessos e modificações necessárias ao Banco de dados.
+
+- Sign-up Page; (Front-end) :large_blue_circle: :heavy_check_mark:
+- Criptografia no envio dos dados; (Front-end) :red_circle:
+- Criação de classe de criptografia; (Back-end) :red_circle: :heavy_check_mark:
+- Autenticação via SSH com o Banco de dados pessoais; (BD) :red_circle:
+- Persistência dos dados; (BD) :yellow_circle:
+
+
+### Sprint 3 - 05/10 A 18/10:
+
+Com a criptografia simétrica da aplicação realizada e persistindo no Banco de Dados de forma segura, esta entrega irá focar na finalização das demais páginas e rotas, 
+
+- Validação dos dados; (Back-end) :yellow_circle:
+- Criação das rotas de Sign-in; (Back-end) :yellow_circle:
+- Criação da Sign-in Page; (Front-end) :yellow_circle:
+- Criação de rota para Profile Page (Back-end) :large_blue_circle:
+- Criação da Profile Page (Front-end) :large_blue_circle:
+
+
+### Sprint 4 - 19/10 A 01/11:
+
+Após as entregas acima, utilizaremos desta sprint para finalizar o restante das tarefas e consertar quaisquer passos anteriores que estejam fora do padrão requisitado pelo cliente.
+
+- Criação de rota para Editar o usuário (Back-end) :large_blue_circle:
+- Ajustes na Profile Page para suportar a edição e exclusão simples (Front-end) :large_blue_circle:
+
+### Sprint 5 - 02/11 A 15/11:
+
+Reservada para possiveis consertos e criação da apresentação final. :large_blue_circle:
+
+
+### Sprint 6 - 16/11 A 29/11:
+
+Reservada para possiveis consertos e criação da apresentação final. :large_blue_circle:
+
 
 Features
 -------------
