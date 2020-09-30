@@ -4,10 +4,12 @@ from bson import json_util
 from src.model.account import Account as ModelAccount
 from src.model.address import Address as ModelAddress
 from src.model.utils.crypto import Crypt
+from flask_cors import cross_origin
 
 bp = Blueprint('account', __name__, url_prefix='/account')
 
-@bp.route('/register', methods=['POST', 'GET'])
+@bp.route('/register', methods=['POST', 'GET', 'OPTIONS'])
+@cross_origin(supports_credentials=True)
 def register():
 
     if request.method == 'POST':
@@ -41,4 +43,3 @@ def register():
 
     else:
         return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=404)
-    

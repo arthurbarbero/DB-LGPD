@@ -15,6 +15,5 @@ def hello_world():
 
 app.wsgi_app = DBConnect(app.wsgi_app)
 app.wsgi_app = ProxyFix(app.wsgi_app)
-CORS(app)
+CORS(app, support_credentials=True)
 app.register_blueprint(AccountController.bp)
-
