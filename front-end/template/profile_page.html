@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/profile_page.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <form id="search">
+            <input type="text" placeholder="Busque o que você deseja ">
+            <button type="submit">
+                <div id="icon">
+                    <img id="icon_search" src="../icons/search.svg" alt="busca">
+                </div>
+            </button>
+        </form>
+        <div class="nav-menu">
+            <button id="btn-login" type="input">Login</button>
+            <button id="btn-cadastre-se" type="input">Cadastre-se</button>
+        </div>
+    </header>
+    
+        <section class="flex-conteiner"> 
+            <label for="fname"class="titulo">Meus Dados</label><br>
+            <div id="content2" >
+                <label for="fname"class="titulo" >Dados da conta</label>
+                <a href="https://www.w3schools.com" class="link">Precisa de ajuda com os dados da sua conta!</a>
+            </div>
+            
+            <select class="item">
+                <option selected>Usuario</option>
+                <option value="1">Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+            </select><br>
+            <select class="item">
+                <option selected>Usuario</option>
+                <option value="1">Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+            </select><br><br>
+            <div id="content2">
+                <label for="fname"class="titulo">Dados pessoais</label>
+                <a href="https://www.w3schools.com" class="link">Precisa de ajuda com os dados da sua conta!</a>
+            </div>
+            
+            <select class="item">
+                <option selected>Nome completo</option>
+                <option value="1">Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+            </select><br>
+            <select class="item">
+                <option selected>Documento</option>
+                <option value="1">Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+            </select><br>
+            <select class="item">
+                <option selected>Telefone</option>
+                <option value="1">Um</option>
+                <option value="2">Dois</option>
+                <option value="3">Três</option>
+            </select><br><br>
+            <label class="titulo">Cartões</label>
+        <div class="titulo">
+
+            <img src="../icons/cartao.png" style="width:59px;position:relative;left: 8px" >
+            <a class="excluir"href="teste_redirecionamento.html">Excluir</a>
+
+        </div>
+
+        <div class="titulo">
+
+            <img src="../icons/cartao.png" style="width:59px;position:relative;left: 8px">
+            <a class="excluir" href="teste_redirecionamento.html">Excluir</a>
+
+        </div><br><br>
+        <label class="titulo" >Endereço</label>
+        <div class="titulo">
+
+            <p>Avenida Cesare Mansueto Giulio Lattes, 1350 - Eugênio de Melo</p>
+
+
+        </div>
+
+        <div class="titulo">
+
+            <a href="teste_redirecionamento.html">Adicionar endereço</a>
+        </div>
+        </section>
+        
+        <style>
+            #content {
+                background: #e7eef5;
+                width: 500px;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                left: 425px;
+            }
+            #content2 {
+                display: flex;
+                flex-direction: row;
+            }
+            .link{
+                font-size: 11px;
+                position: relative;
+                left: 159px;
+            }
+            .titulo{
+                position: relative;
+                left: 36px;
+            }
+            .item{
+                height: 27px;
+                width: 420px;
+                color: black;
+                background: white;
+                margin: -10px;
+                position: relative;
+                left: 46px;
+                top: 20px;
+                
+            }
+            .excluir{
+                position: relative;
+                left: 305px;
+            }
+        </style>
+    <footer class="nav-footer">
+        <div class="info-footer">
+            <p>Termos e condições</p>
+            <p>Como protegemos sua privacidade</p>
+            <p>Contato</p>
+            <p>Sobre</p>
+        </div>
+        <div id="chat">
+            <img id="icon-footer" src="../icons/message.svg" alt="chat">
+        </div>
+    </footer>
+</body>
+
+</html>
