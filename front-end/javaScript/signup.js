@@ -1,18 +1,33 @@
 const BASE_URL = 'http://127.0.0.1:5000'
 const idInputs = ['nome', 'sobrenome', 'email', 'senha', 'ddd', 'cel', 'nasc', 'cpf', 'rua', 'bairro', 'cep', 'numeros', 'estado', 'cidade', 'complemento'];
 
+function setToasted(status) {
+    const elemento = document.getElementById('toasted');
+    if(status) {
+        elemento.className = 'success';
+        elemento.insertAdjacentHTML('afterbegin', 'Register User Success');
+    } else {
+        elemento.className = 'error';
+        elemento.insertAdjacentHTML('afterbegin', 'Failed to register use');
+    }
+    elemento.style.display = 'flex';
 
+    setTimeout(function() {
+        elemento.style.display = 'none'
+        elemento.innerHTML = '<img src="/front-end/icons/times-solid.svg" >' }, 3000);
+        if(status) window.location.href = 'homepage.html';
+
+}
 
 async function sendData(jsonData) {
     return axios.post(`${BASE_URL}/account/register`, { data: jsonData }, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
     .then(resp => {
-        if (status == 200) {
-            localStorage.setItem('user', resp.data.id);
-        } else {
-            // Toast
-        }
+        // localStorage.setItem('user', resp.data.id)
+        setToasted(true);
     })
-    .catch(err => {console.log(err)})
+    .catch(err => {
+        setToasted(false);
+    })
 }
 
 function getInputsById() {
@@ -42,6 +57,6 @@ function getInputsById() {
     return cliente;
 }
 async function saveData() {
-    let cliente = await getInputsById();
+    let cliente = getInputsById();
     sendData(cliente);
 }
