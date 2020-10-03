@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/front-end/css/signup-page.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../javaScript/utils/toasted.js"></script>
+    <script src="../javaScript/utils/cript.js"></script>
+    <script src="../javaScript/signup.js"></script>
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <form method="get" id="search">
+            <input class="input_pesq" type="text" placeholder="Busque o que você deseja ">
+            <button type="submit">
+            <div id="icon">
+                <img id="icon_search" src="/front-end/icons/search.svg" alt="busca">
+            </div>
+             </button>
+        </form>
+        <div class="nav-menu">
+            <button id="btn-login" type="input">Login</button>
+            <button id="btn-cadastre-se" type="input">Cadastre-se</button>
+        </div>
+    </header>
+    <section class="flex-conteiner">
+        <div class="dados">
+            <input class="input_cadas" type="text" id="nome" placeholder="Nome" size="20" >
+            <input class="input_cadas" type="text" id="sobrenome" placeholder="Sobrenome" size="20" />
+        </div>
+        <div class="dados">
+            <input class="input_email" type="email" id="email" placeholder="Endereço de E-mail" />
+        </div>
+        <div class="dados">
+            <input class="input_email" type="password" id="senha" placeholder="Senha" />
+        </div>
+        <div class="dados">
+            <input class="input_ddd" type="text" id="ddd" placeholder="(12)" />
+            <input type="text" id="cel" placeholder="Número de Celular" />
+            <input class="input_nasc" type="date" id="nasc" placeholder="Data de nascimento" />
+        </div>
+        <div class="dados">
+            <input class="input_cadas" type="text" id="cpf" placeholder="CPF" />
+        </div>
+        <div class="dados">
+            <input class="input_cadas" type="text" id="rua" placeholder="Rua" />
+            <input class="input_cadas" type="text" id="bairro" placeholder="Bairro" />
+        </div>
+        <div class="dados">
+            <input class="input_cadas" id="cep" placeholder="CEP" />
+            <input class="input_cadas" id="numeros" placeholder="Número" />
+            <input class="input_cadas" id="estado" placeholder="UF" />
+        </div>
+        <div class="dados">
+            <input class="input_cadas" type="text" id="cidade" placeholder="Cidade" />
+            <input class="input_cadas" type="text" id="complemento" placeholder="Complemento" />
+        </div>
+        <div class="btn-cadas">
+            <button onclick="saveData()" id="btn-cadas" type="input">Cadastrar</button>
+        </div>
+
+
+    </section>
+    <footer class="nav-footer">
+        <div class="info-footer">
+            <p>Termos e condições</p>
+            <p>Como protegemos sua privacidade</p>
+            <p>Contato</p>
+            <p>Sobre</p>
+        </div>
+        <div id="chat">
+            <img id="icon-footer" src="/front-end/icons/message.svg" alt="chat">
+        </div>
+    </footer>
+</body>
+</html>
