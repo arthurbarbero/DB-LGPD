@@ -22,7 +22,7 @@ class Crypt:
         aes = AES.new(self.key_back, AES.MODE_CBC, IV)
         return base64.b64encode(IV + aes.encrypt(self.pad(message)))
 
-    def decrypt(self, encrypted):
+    def decrypt_front(self, encrypted):
         encrypted = base64.b64decode(encrypted)
         IV = encrypted[:self.block_size]
         aes = AES.new(self.key_front, AES.MODE_CBC, IV)
@@ -32,3 +32,9 @@ class Crypt:
         IV = Random.new().read(self.block_size)
         aes = AES.new(self.key_front, AES.MODE_CBC, IV)
         return base64.b64encode(IV + aes.encrypt(self.pad(message)))  
+
+    def decrypt(self, encrypted):
+        encrypted = base64.b64decode(encrypted)
+        IV = encrypted[:self.block_size]
+        aes = AES.new(self.key_back, AES.MODE_CBC, IV)
+        return self.unpad(aes.decrypt(encrypted[self.block_size:]))
