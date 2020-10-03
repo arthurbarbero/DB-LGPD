@@ -4,18 +4,15 @@ from bson import json_util
 from src.model.account import Account as ModelAccount
 from src.model.address import Address as ModelAddress
 from src.model.utils.crypto import Crypt
-from flask_cors import cross_origin
 
 bp = Blueprint('account', __name__, url_prefix='/account')
 
-@bp.route('/register', methods=['POST', 'GET', 'OPTIONS'])
-@cross_origin(supports_credentials=True)
+@bp.route('/register', methods=['POST', 'GET'])
 def register():
 
     if request.method == 'POST':
         crypt_suite = Crypt()
         obj = json_util.loads(crypt_suite.decrypt(request.json['data']))
-
         # Realizar as validações
         try:
             address = obj.pop("address")
