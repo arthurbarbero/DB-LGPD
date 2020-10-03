@@ -6,6 +6,8 @@ async function sendData(jsonData) {
     return axios.post(`${BASE_URL}/account/register`, { data: jsonData }, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
     .then(resp => {
         setToasted(true, 'Register User Success');
+        localStorage.setItem("user_id", resp.data.id)
+
         setTimeout(function() {
             window.location.href = '/front-end/template/homepage.html' }, 3500);
     })

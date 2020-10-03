@@ -12,7 +12,7 @@ def register():
 
     if request.method == 'POST':
         crypt_suite = Crypt()
-        obj = json_util.loads(crypt_suite.decrypt(request.json['data']))
+        obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
         # Realizar as validações
         try:
             address = obj.pop("address")
@@ -30,7 +30,7 @@ def register():
             accountObj.address = addressObj
             accountObj.save()
 
-            response = crypt_suite.encrypt_front(str(accountObj.id)).decode()
+            response = crypt_suite.encrypt(str(accountObj.id)).decode()
 
             return Response(json_util.dumps({"id" : response}), mimetype="application/json", status=200)
 
