@@ -9,7 +9,7 @@ async function sendData(jsonData) {
         localStorage.setItem("user_id", resp.data.id)
 
         setTimeout(function() {
-            window.location.href = '/front-end/template/homepage.html' }, 3500);
+            window.location.href = '/index.html' }, 3500);
     })
     .catch(err => {
         setToasted(false, 'Failed to register use');
