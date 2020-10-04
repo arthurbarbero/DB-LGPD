@@ -9,11 +9,9 @@
 Tutorial - [Anaconda](https://www.anaconda.com/products/individual)
 
 OBS.: tenha certeza que está dentro da pasta /back-end
-    ```
-        conda create -n env python=3.6
 
+        conda create -n env python=3.6
         conda activate env
-    ```
 
 - Baixe as bibliotecas:
 
