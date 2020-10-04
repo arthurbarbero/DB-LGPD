@@ -66,10 +66,12 @@ Tag - [Entrega 1](https://github.com/arthurbarbero/DB-LGPD/tree/Entrega-1)
 Após a criação de um "boilerplate" para ambas as frentes, front e back-end, iremos focar esta entrega na produção de um fluxo de cadastro completo e na conexão segura com o Banco de Dados, com criptografia nas informações que são enviadas da captação até o Banco de Dados. Utilizaremos criptografia simétrica no padrão AES-256 para o envio das informações do front-end para o back-end, assim como a decriptação, validação dos dados e nova criptografia simétrica no mesmo padrão, com outra chave para a persistência no banco. Sua conexão será via autênticação SSH ao Banco de dados Mongo, assim somente a aplicação com seu conjunto de chaves fará os acessos e modificações necessárias ao Banco de dados.
 
 - Sign-up Page; (Front-end) :large_blue_circle: :heavy_check_mark:
-- Criptografia no envio dos dados; (Front-end) :red_circle:
+- Criptografia no envio dos dados; (Front-end) :red_circle: :heavy_check_mark:
 - Criação de classe de criptografia; (Back-end) :red_circle: :heavy_check_mark:
-- Autenticação via SSH com o Banco de dados pessoais; (BD) :red_circle:
-- Persistência dos dados; (BD) :yellow_circle:
+- Autenticação via SSH com o Banco de dados pessoais; (BD) :red_circle: :heavy_check_mark:
+- Persistência dos dados; (BD) :yellow_circle: :heavy_check_mark:
+
+[Entrega 2](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega2.md)
 
 
 ### Sprint 3 - 05/10 A 18/10:
