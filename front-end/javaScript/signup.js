@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1:5000'
+const BASE_URL = 'http://54.94.78.88'
 const idInputs = ['nome', 'sobrenome', 'email', 'senha', 'ddd', 'cel', 'nasc', 'cpf', 'rua', 'bairro', 'cep', 'numeros', 'estado', 'cidade', 'complemento'];
 
 
