@@ -4,4 +4,4 @@ Werkzeug==1.0.*
 mongoengine==0.19.*
 flask_cors
 pycrypto
-python-dateutil==1.4
+python-dateutil
