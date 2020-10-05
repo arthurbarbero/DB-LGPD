@@ -514,3 +514,10 @@ textarea:focus, input:focus {
     right: 27px;
     bottom: 39px;
 }
+
+#more_vert{
+    position: relative;
+    left: 380px;
+    bottom: 78px;
+    font-size:36px
+}
