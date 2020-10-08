@@ -1,4 +1,4 @@
-const BASE_URL = 'http://54.94.78.88'
+const BASE_URL = 'http://ec2-52-67-163-45.sa-east-1.compute.amazonaws.com'
 const idInputs = ['nome', 'sobrenome', 'email', 'senha', 'ddd', 'cel', 'nasc', 'cpf', 'rua', 'bairro', 'cep', 'numeros', 'estado', 'cidade', 'complemento'];
 
 
