@@ -257,11 +257,7 @@ textarea:focus, input:focus {
     display: flex;
     flex-direction: row;
 }
-.link{
-    font-size: 11px;
-    position: relative;
-    left: 159px;
-}
+
 .titulo{
     position: relative;
     left: 36px;
@@ -351,7 +347,7 @@ textarea:focus, input:focus {
     height: 80px;
     position: relative;
     left: 35px;
-   
+    top: 39px;
 
 }
 #box_cartao_segunda{
@@ -364,7 +360,9 @@ textarea:focus, input:focus {
     height: 80px;
     position: relative;
     left: 35px;
-    bottom: 4px;
+    bottom: 6px;
+    top: 33px;
+    
 }
 #box_endereco{
     background: #FFFFFF;
@@ -397,20 +395,17 @@ textarea:focus, input:focus {
     height: 60px;
     position: relative;
     left: 35px;
-    bottom: 9px;
     
    
 }
 #adicionar_link{
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 18px;
     line-height: 35px;
-
     color: #00BCE7;
-
+    bottom: 30px;
 }
 .cartao_dados_subtitulo_primera{
     position: relative;
@@ -517,8 +512,8 @@ textarea:focus, input:focus {
 
 #more_vert{
     position: relative;
-    left: 380px;
-    bottom: 78px;
+    left: 420px;
+    bottom: 153px;
     font-size:36px
 }
 .box_campo{
@@ -656,4 +651,13 @@ textarea:focus, input:focus {
     position: relative;
     left: 159px;
     top: 5px;
+}
+#nome{
+    position: relative;
+    top: 7px;
+    left: 7px;
+}
+#estilo_endereco{
+    position: relative;
+    top: 9px;
 }
