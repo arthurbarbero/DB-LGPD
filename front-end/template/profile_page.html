@@ -28,25 +28,26 @@
     </header>
     
         <section class="flex-conteiner"> 
-            <label for="fname"class="titulo">Meus Dados</label><br>
+            <label class="titulo">Meus Dados</label><br>
             <div id="content2" >
-                <label for="fname"class="titulo" >Dados da conta</label>
-                <a href="https://www.w3schools.com" class="link">Precisa de ajuda com os dados da sua conta</a>
+                <label class="titulo" >Dados da conta</label>
+                <a href="https://www.w3schools.com" id="link_dados_conta">Precisa de ajuda com os dados da sua conta</a>
             </div>
             
             <label class="box_campo" id="box_campo_usuario"><p >Usuario</p><img class="img_next" id ="img_next_usuario"src="../icons/next.svg" ></label>
             
             <p class="box_campo" id="box_campo_email">Email <img class="img_next" id ="img_next_email" src="../icons/next.svg" ></label>
             <div id="content2">
-                <label for="fname"class="titulo">Dados pessoais</label>
-                <a href="https://www.w3schools.com" class="link">Precisa de ajuda com os dados da sua conta</a>
+                <label class="titulo" id="estilo_dados_pessoais">Dados pessoais</label>
+                <a href="https://www.w3schools.com" id="link_dados_pessoais">Precisa de ajuda com os dados da sua conta</a>
             </div>
             
             <label class="box_campo" id="box_campo_nome_completo" >Nome completo <img class="img_next"  id ="img_next_nome_completo" src="../icons/next.svg" ></label>
             
             <label class="box_campo" id="box_campo_documento">Documento <img class="img_next" id ="img_next_documento" src="../icons/next.svg" ></label>
             <label class="box_campo" id="box_campo_telefone">Telefone <img class="img_next" id ="img_next_telefone"src="../icons/next.svg" ></label>
-            <label class="titulo">Cartões</label>
+            <div>
+            <label class="titulo" id="estilo_cartao">Cartões</label>
         <div class="box_cartao">
             <div class="titulo">
 
@@ -70,12 +71,12 @@
             </div>
             <button class="excluir_segunda">Excluir</button>
         </div>
-        <div class="box_cartao_segunda">
-            <div class="titulo_segunda">
+        <div id="box_cartao_segunda">
+            <div id="titulo_segunda">
     
-                <img src="../icons/cartao.png" class="img_cartao_segunda">
+                <img src="../icons/cartao.png" id="img_cartao_segunda">
                 <div class="cartao_dados_titulo">
-                    <p  class="cartao_dados_subtitulo_segunda">
+                    <p  id="cartao_dados_subtitulo_segunda">
                         Terminado em 7859
                     </p>
                     <p class="cartao_dados_subtitulo_segunda_parte"> 
@@ -94,21 +95,25 @@
             
         
        <br><br>
-       <label class="titulo" >Endereço</label>
+       <label class="titulo"  id="estilo_endereco" >Endereço</label>
      
-        <div class="box_endereco">
-            <p class="paragrafo_primeiro_p1">Travessa Adalto Feitosa da Silva </p>
-                <p class="paragrafo_primeiro_p2">Pereira dos Santos 2300</p>
-                    <div class="titulo_endereco">
-    
-                        <p class="paragrafo_segunda_p1">Referencia: (Correio da cidade) Caixa postal 10
-                            </p>
-                            <p class="paragrafo_segunda_p2"> São Paulo(12290000), Campinas</p>
-                           <p class="paragrafo_segunda_p3">De Paula Carvalho Pinto - 16 997985469</p>
-                            
-    
-    
-                    </div>
+       <div id="box_endereco">
+           <p class="paragrafo_primeiro_p1">Travessa Adalto Feitosa da Silva </p>
+               <p class="paragrafo_primeiro_p2">Pereira dos Santos 2300</p>
+                   <div class="titulo_endereco">
+   
+                       <p class="paragrafo_segunda_p1">Referencia: (Correio da cidade) Caixa postal 10
+                           </p>
+                           <p class="paragrafo_segunda_p2"> São Paulo(12290000), Campinas</p>
+                          <p id="paragrafo_segunda_p3">De Paula Carvalho Pinto - 16 997985469</p>
+                           
+   
+   
+                   </div>
+                   
+                  
+          </div>
+       
                     
                     <i class="material-icons" id="more_vert">more_vert</i>
            </div>
@@ -116,7 +121,7 @@
                
            <label  class="box_endereco_link" id="adicionar_link">Adicionar endereço <img class="img_next" id ="img_next_endereco" src="../icons/next.svg" ></label>
           
-        
+        <br>
            
      
       

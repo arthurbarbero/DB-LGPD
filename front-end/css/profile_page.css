@@ -354,7 +354,7 @@ textarea:focus, input:focus {
    
 
 }
-.box_cartao_segunda{
+#box_cartao_segunda{
     background: #FFFFFF;
     border: 1px solid #C2A7C2;
     box-sizing: border-box;
@@ -366,7 +366,7 @@ textarea:focus, input:focus {
     left: 35px;
     bottom: 4px;
 }
-.box_endereco{
+#box_endereco{
     background: #FFFFFF;
     border: 1px solid #C2A7C2;
     box-sizing: border-box;
@@ -417,7 +417,7 @@ textarea:focus, input:focus {
     top: 19px;
     
 }
-.cartao_dados_subtitulo_segunda{
+#cartao_dados_subtitulo_segunda{
     position: relative;
     bottom: 30px;
 }
@@ -443,7 +443,7 @@ textarea:focus, input:focus {
     background: #ffffff;
    
 }
-.titulo_segunda{
+#titulo_segunda{
     position: relative;
     left: 36px;
     font-family: Roboto;
@@ -491,7 +491,7 @@ textarea:focus, input:focus {
     position: relative;
     right: 21px;
 }
-.paragrafo_segunda_p3{
+#paragrafo_segunda_p3{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -508,7 +508,7 @@ textarea:focus, input:focus {
     top: 12px;
 
 }
-.img_cartao_segunda{
+#img_cartao_segunda{
     width: 49px;
     position:relative;
     right: 27px;
@@ -640,7 +640,20 @@ textarea:focus, input:focus {
     height: 60px;
     position: relative;
     left: 35px;
-   
-    
-   
+}
+#estilo_cartao{
+    position: relative;
+    top: 36px;
+}
+#link_dados_pessoais{
+    font-size: 11px;
+    position: relative;
+    left: 159px;
+    top: 14px;
+}
+#link_dados_conta{
+    font-size: 11px;
+    position: relative;
+    left: 159px;
+    top: 5px;
 }
