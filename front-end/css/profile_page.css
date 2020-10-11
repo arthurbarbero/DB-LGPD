@@ -521,3 +521,126 @@ textarea:focus, input:focus {
     bottom: 78px;
     font-size:36px
 }
+.box_campo{
+    background: #FFFFFF;
+    border: 1px solid #C2A7C2;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 416px;
+    height: 28px;
+    position: relative;
+    left: 35px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #AC97AC;
+}
+#box_campo_usuario{
+    position: relative;
+    top: 9px;
+    height: 39px;
+}
+#box_campo_email{
+    position: relative;
+    top: 6px;
+    height: 39px;
+}
+#box_campo_documento{
+    position: relative;
+    bottom: 6px;
+    top: 16px;
+    height: 39px;
+}
+#box_campo_telefone{
+    position: relative;
+    bottom: 11px;
+    top: 12px;
+    height: 39px;
+}
+#box_campo_nome_completo{
+    position: relative;
+    bottom: 11px;
+    top: 18px;
+    height: 39px;
+}
+#estilo_dados_pessoais{
+    position: relative;
+    top: 12px;
+}
+    
+#box_documento{
+    background: #FFFFFF;
+    border: 1px solid #C2A7C2;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 416px;
+    height: 28px;
+    position: relative;
+    left: 35px;
+    top: 7px;
+}
+.img_next{
+    width: 12px;
+    position: relative;
+    left: 341px;
+}
+#img_next_email{
+    width: 12px;
+    position: relative;
+    left: 356px;
+    top: 6px;
+}
+#img_next_documento{
+    width: 12px;
+    position: relative;
+    left: 318px;
+    top: 6px;
+}
+#img_next_telefone{
+    width: 12px;
+    position: relative;
+    left: 337px;
+    top: 6px;
+}
+#img_next_usuario{
+    width: 12px;
+    position: relative;
+    bottom: 5px;
+    left: 396px;
+}
+#img_next_nome_completo{
+    width: 12px;
+    position: relative;
+    left: 290px;
+    top: 6px;
+}
+#img_next_endereco{
+    position: relative;
+    left: 252px;
+}
+#adicionar_link{
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+    color: #00BCE7;
+
+}
+.box_endereco_link{
+    background: #FFFFFF;
+    border: 1px solid #C2A7C2;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 416px;
+    height: 60px;
+    position: relative;
+    left: 35px;
+   
+    
+   
+}
