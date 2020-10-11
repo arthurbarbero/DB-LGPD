@@ -82,3 +82,29 @@ def login():
     
     else:
         return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=405)
+
+@bp.route('/getUser', methods=['POST', 'GET'])
+def get_user():
+    
+    if request.method == 'POST':
+        crypt_suite = Crypt()
+        obj = crypt_suite.decrypt(request.json['id']).decode()
+
+        try:
+            response_object = {}
+            account = json_util.loads(ModelAccount.objects.get(id=obj).to_json())
+
+            address = json_util.loads(ModelAddress.objects.get(id=str(account['address'])).to_json())
+
+            response_object['email'] = crypt_suite.encrypt_front(crypt_suite.decrypt(account["email"]).decode()).decode()
+            response_object['account'] = crypt_suite.encrypt_front(crypt_suite.decrypt(account["data"]).decode()).decode()
+            response_object['address'] = crypt_suite.encrypt_front(crypt_suite.decrypt(address["data"]).decode()).decode()
+
+            return Response(json_util.dumps(response_object), mimetype="application/json", status=200)
+
+        except Exception as error:
+            res = {'Message':'Falha enviar o Id solicitado', 'error': str(error)}
+            return Response(json_util.dumps(res), mimetype='application/json', status=500)
+    
+    else:
+        return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=405)
