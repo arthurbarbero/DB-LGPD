@@ -16,14 +16,24 @@ async function sendData(jsonData) {
         
     })
 }
+function verifyinput(cliente){
+    
+    
+}
 
 function getInputsById() {
-    let cliente = new Object();
+    var cliente = new Object();
 
+    let aux = []
     idInputs.forEach(idElemento => {
-        cliente[idElemento] = document.getElementById(idElemento).value;
+        if (document.getElementById(idElemento).value != null){
+            cliente[idElemento] = document.getElementById(idElemento).value;
+        }else{
+            document.getElementById("span_"+idElemento).show()
+            aux.push(idElemento)
+        }
     });
-
+    
     cliente = encrypt(JSON.stringify(
         {
             first_name: cliente.nome,
@@ -41,9 +51,15 @@ function getInputsById() {
             }
         }
     ));
-    return cliente;
+    if (aux.length <= 0 ){
+        return cliente;
+    }else{
+        console.log("PAssou")
+    }
 }
 async function saveData() {
     let cliente = getInputsById();
-    sendData(cliente);
+    if (cliente != null){
+        sendData(cliente);
+    }
 }
