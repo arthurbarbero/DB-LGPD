@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 }
-html, 
+html,
 body {
     height: 100%;
     width: 100%;
@@ -84,8 +84,8 @@ button {
     margin: 0;
     bottom: 0;
     display: flex;
-    color: #fff; 
-    margin-top: 50px; 
+    color: #fff;
+    margin-top: 50px;
 }
 
 .info-footer{
@@ -95,7 +95,7 @@ button {
     align-items: flex-end;
     margin-bottom: 25px;
     margin-left: 150px;
-    
+
 }
 
 #chat{
@@ -115,13 +115,13 @@ button {
     justify-content: space-between;
     background: white;
     border-radius: 5px;
-    /* padding: 15px; */
+    padding: 30px;
     height: 80vh;
     width: 488px;
     margin: 20px auto;
     box-shadow: 2px 2px 4px 1px black;
     padding-top: 15px;
-    
+
 }
 
 .dados{
@@ -163,7 +163,7 @@ button {
 
 #cel{
     font-size: medium;
-    width: 70%;
+    width: 35%;
     height: 30px;
     margin-top: 10px;
     border-style: none;
@@ -173,7 +173,7 @@ button {
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
-    
+
 }
 
 .input_nasc{
@@ -182,18 +182,12 @@ textarea:focus, input:focus {
     margin-top: 10px;
     border-style: none;
     border-bottom: solid 1px #BBB5B5;
+    color: #757575;
 }
 
-#dianasc{
-    width: 10%;
-}
-
-#mesnasc{
-    width: 45%;
-}
-
-#anonasc{
-    width: 15%;
+#nasc{
+    width: 26%;
+    font: 400 13.3333px arial;
 }
 
 #cpf{
@@ -204,7 +198,7 @@ textarea:focus, input:focus {
     width: 45%;
 }
 
-#numerores{
+#numeros{
     width: 15%;
 }
 
@@ -238,7 +232,7 @@ textarea:focus, input:focus {
         margin: 0px auto;
         bottom: 0;
         display: flex;
-        color: #fff; 
-        margin-top: 50px;   
+        color: #fff;
+        margin-top: 50px;
     }
 }
