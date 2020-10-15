@@ -53,6 +53,7 @@ function getInputsById() {
     if (aux.length <= 0 ){
         return cliente;
     }else{
+        setToasted(false, 'Preencha todos os campos corretamente !');
     }
 }
 async function saveData() {
