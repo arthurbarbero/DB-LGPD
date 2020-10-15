@@ -28,78 +28,51 @@
     </header>
     <section class="flex-conteiner">
         <div class="dados">
-            <span>    
-                <input class="input_cadas" type="text" id="nome" placeholder="Nome" size="20" >
-                <p id = span_nome hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>
-                <input class="input_cadas" type="text" id="sobrenome" placeholder="Sobrenome" size="20" />
-                <p id = span_sobrenome hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_email" type="email" id="email" placeholder="Endereço de E-mail" />
-                <p id = span_email hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_email" type="password" id="senha" placeholder="Senha" />
-                <p id = span_password hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_ddd" type="text" id="ddd" placeholder="(12)" />
-                <p id = span_ddd hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>
-                <input type="text" id="cel" placeholder="Número de Celular" />
-                <p id = span_cel hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>
-                <input class="input_nasc" type="date" id="nasc" placeholder="Data de nascimento" />
-                <p id = span_nasc hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_cadas" type="text" id="cpf" placeholder="CPF" />
-                <p id = span_cpf hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_cadas" type="text" id="rua" placeholder="Rua" />
-                <p id = span_rua hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>
-                <input class="input_cadas" type="text" id="bairro" placeholder="Bairro" />
-                <p id = span_bairro hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_cadas" id="cep" placeholder="CEP" />
-                <p id = span_cep hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>    
-                <input class="input_cadas" id="numeros" placeholder="Número" />
-                <p id = span_numeros hidden>Por favor, preencha o campo</p>
-            </span>
-            <span>
-                <input class="input_cadas" id="estado" placeholder="UF" />
-                <p id = span_estado hidden>Por favor, preencha o campo</p>
-            </span>
-        </div>
-        <div class="dados">
-            <span>
-                <input class="input_cadas" type="text" id="cidade" placeholder="Cidade"> 
-                <p id = span_cidade hidden>Por favor, preencha o campo</p>
-            </span>
-            <input class="input_cadas" type="text" id="complemento" placeholder="Complemento" />
+              
+            <input class="input_cadas" type="text" id="nome" placeholder="Nome" size="20" onblur="onFocusLoose(this)">
                 
+            <input class="input_cadas" type="text" id="sobrenome" placeholder="Sobrenome" size="20" onblur="onFocusLoose(this)"/>
+                
+        </div>
+        <div class="dados">
+            
+            <input class="input_email" type="email" id="email" placeholder="Endereço de E-mail" onblur="onFocusLoose(this)"/>
+                
+        </div>
+        <div class="dados">
+            
+            <input class="input_email" type="password" id="senha" placeholder="Senha" onblur="onFocusLoose(this)"/>
+               
+        </div>
+        <div class="dados">
+            
+            <input class="input_ddd" type="text" id="ddd" placeholder="(12)" onblur="onFocusLoose(this)"/>
+               
+            <input class= "input_cel" type="text" id="cel" placeholder="Número de Celular" onblur="onFocusLoose(this)"/>
+        
+            <input class="input_nasc" type="date" id="nasc" placeholder="Data de nascimento" onblur="onFocusLoose(this)"/>
+                
+        </div>
+        <div class="dados">
+            
+            <input class="input_cadas" type="text" id="cpf" placeholder="CPF" onblur="onFocusLoose(this)"/>
+                
+        </div>
+        <div class="dados">
+            
+            <input class="input_cadas" type="text" id="rua" placeholder="Rua" onblur="onFocusLoose(this)"/>
+            
+            <input class="input_cadas" type="text" id="bairro" placeholder="Bairro" onblur="onFocusLoose(this)"/>
+               
+        </div>
+        <div class="dados">
+            <input class="input_cadas" id="cep" placeholder="CEP" onblur="onFocusLoose(this)"/>
+            <input class="input_cadas" id="numeros" placeholder="Número" onblur="onFocusLoose(this)"/>
+            <input class="input_cadas" id="estado" placeholder="UF" onblur="onFocusLoose(this)"/>
+        </div>
+        <div class="dados">
+            <input class="input_cadas" type="text" id="cidade" placeholder="Cidade"onblur="onFocusLoose(this)"> 
+            <input class="input_cadas" type="text" id="complemento" placeholder="Complemento" onblur="onFocusLoose(this)"/> 
         </div>
         <div class="btn-cadas">
             <button onclick="saveData()" id="btn-cadas" type="input">Cadastrar</button>

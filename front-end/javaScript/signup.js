@@ -16,20 +16,19 @@ async function sendData(jsonData) {
         
     })
 }
-function verifyinput(cliente){
-    
-    
-}
+
+
 
 function getInputsById() {
     var cliente = new Object();
 
     let aux = []
     idInputs.forEach(idElemento => {
-        if (document.getElementById(idElemento).value != null){
+        document.getElementById(idElemento).classList.remove("span")
+        if (document.getElementById(idElemento).value != ""){
             cliente[idElemento] = document.getElementById(idElemento).value;
         }else{
-            document.getElementById("span_"+idElemento).show()
+            document.getElementById(idElemento).classList.add("span")
             aux.push(idElemento)
         }
     });
@@ -54,12 +53,18 @@ function getInputsById() {
     if (aux.length <= 0 ){
         return cliente;
     }else{
-        console.log("PAssou")
     }
 }
 async function saveData() {
     let cliente = getInputsById();
+
     if (cliente != null){
         sendData(cliente);
     }
 }
+async function onFocusLoose(element) {
+    let hasclass = element.classList
+    if (element.value && hasclass) {
+        element.classList.remove('span');
+    }
+};
