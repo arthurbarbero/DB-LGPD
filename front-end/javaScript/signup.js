@@ -49,22 +49,24 @@ function getInputsById() {
         }
     ));
     if (aux.length <= 0 ){
+
         return cliente;
 
     }else{
+
         setToasted(false, 'Preencha todos os campos corretamente !');
     }
 }
 async function saveData() {
+    
     let cliente = getInputsById();
-
     if (cliente != null){
         sendData(cliente);
     }
 }
 async function onFocusLoose(element) {
-    let hasclass = element.classList.value
 
+    let hasclass = element.classList.value
     if (element.value && hasclass.includes("span")) {
         element.classList.remove('span');
     }
