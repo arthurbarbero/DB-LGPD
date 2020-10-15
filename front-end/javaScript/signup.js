@@ -17,8 +17,6 @@ async function sendData(jsonData) {
     })
 }
 
-
-
 function getInputsById() {
     var cliente = new Object();
 
@@ -52,6 +50,7 @@ function getInputsById() {
     ));
     if (aux.length <= 0 ){
         return cliente;
+
     }else{
         setToasted(false, 'Preencha todos os campos corretamente !');
     }
@@ -64,8 +63,9 @@ async function saveData() {
     }
 }
 async function onFocusLoose(element) {
-    let hasclass = element.classList
-    if (element.value && hasclass) {
+    let hasclass = element.classList.value
+
+    if (element.value && hasclass.includes("span")) {
         element.classList.remove('span');
     }
 };
