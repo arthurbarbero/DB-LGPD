@@ -28,41 +28,39 @@
     </header>
     <section class="flex-conteiner">
         <div class="dados">
-            <input class="input_cadas" type="text" id="nome" placeholder="Nome" size="20" >
-            <input class="input_cadas" type="text" id="sobrenome" placeholder="Sobrenome" size="20" />
+            <input class="input_cadas" type="text" id="nome" placeholder="Nome" size="20" onblur="onFocusLoose(this)">
+            <input class="input_cadas" type="text" id="sobrenome" placeholder="Sobrenome" size="20" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_email" type="email" id="email" placeholder="Endereço de E-mail" />
+            <input class="input_email" type="email" id="email" placeholder="Endereço de E-mail" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_email" type="password" id="senha" placeholder="Senha" />
+            <input class="input_email" type="password" id="senha" placeholder="Senha" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_ddd" type="text" id="ddd" placeholder="(12)" />
-            <input type="text" id="cel" placeholder="Número de Celular" />
-            <input class="input_nasc" type="date" id="nasc" placeholder="Data de nascimento" />
+            <input class="input_ddd" type="text" id="ddd" placeholder="(12)" onblur="onFocusLoose(this)"/>
+            <input class= "input_cel" type="text" id="cel" placeholder="Número de Celular" onblur="onFocusLoose(this)"/>
+            <input class="input_nasc" type="date" id="nasc" placeholder="Data de nascimento" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_cadas" type="text" id="cpf" placeholder="CPF" />
+            <input class="input_cadas" type="text" id="cpf" placeholder="CPF" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_cadas" type="text" id="rua" placeholder="Rua" />
-            <input class="input_cadas" type="text" id="bairro" placeholder="Bairro" />
+            <input class="input_cadas" type="text" id="rua" placeholder="Rua" onblur="onFocusLoose(this)"/>
+            <input class="input_cadas" type="text" id="bairro" placeholder="Bairro" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_cadas" id="cep" placeholder="CEP" />
-            <input class="input_cadas" id="numeros" placeholder="Número" />
-            <input class="input_cadas" id="estado" placeholder="UF" />
+            <input class="input_cadas" id="cep" placeholder="CEP" onblur="onFocusLoose(this)"/>
+            <input class="input_cadas" id="numeros" placeholder="Número" onblur="onFocusLoose(this)"/>
+            <input class="input_cadas" id="estado" placeholder="UF" onblur="onFocusLoose(this)"/>
         </div>
         <div class="dados">
-            <input class="input_cadas" type="text" id="cidade" placeholder="Cidade" />
-            <input class="input_cadas" type="text" id="complemento" placeholder="Complemento" />
+            <input class="input_cadas" type="text" id="cidade" placeholder="Cidade"onblur="onFocusLoose(this)"> 
+            <input class="input_cadas" type="text" id="complemento" placeholder="Complemento" onblur="onFocusLoose(this)"/> 
         </div>
         <div class="btn-cadas">
             <button onclick="saveData()" id="btn-cadas" type="input">Cadastrar</button>
         </div>
-
-
     </section>
     <footer class="nav-footer">
         <div class="info-footer">
