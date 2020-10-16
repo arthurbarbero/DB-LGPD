@@ -58,7 +58,6 @@ function getInputsById() {
     }
 }
 
-
 async function saveData() {
     let cliente = getInputsById();
 
