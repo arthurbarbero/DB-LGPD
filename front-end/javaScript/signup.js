@@ -57,16 +57,19 @@ function getInputsById() {
         setToasted(false, 'Preencha todos os campos corretamente !');
     }
 }
+
+
 async function saveData() {
-    
     let cliente = getInputsById();
+
     if (cliente != null){
         sendData(cliente);
     }
 }
-async function onFocusLoose(element) {
 
+async function onFocusLoose(element) {
     let hasclass = element.classList.value
+    
     if (element.value && hasclass.includes("span")) {
         element.classList.remove('span');
     }
