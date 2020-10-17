@@ -1,133 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="stylesheet" type="text/css" href="../css/profile_page.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 
-    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/front-end/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/front-end/css/profile_page.css">
+    <title>Profile Page</title>
 </head>
-
 <body>
     <header>
         <form id="search">
             <input type="text" placeholder="Busque o que você deseja ">
             <button type="submit">
                 <div id="icon">
-                    <img id="icon_search" src="../icons/search.svg" alt="busca">
+                    <img id="icon_search" src="/front-end/icons/search.svg" alt="busca">
                 </div>
-            </button>
-        </form>
+             </button>
+        </form> 
         <div class="nav-menu">
-            <button id="btn-login" type="input">Login</button>
-            <button id="btn-cadastre-se" type="input">Cadastre-se</button>
+            <form class="buttons">
+                <button id="btn-login" type="input">
+                    <img class="icon-header" id="icon-perfil" src="/front-end/icons/perfil.svg" alt="perfil">
+                    Meu Perfil
+                </button>
+                <button id="btn-cadastre-se" type="input">
+                    <img class="icon-header" id="icon-compra" src="/front-end/icons/cart.svg" alt="carrinho">
+                    Compras</button>
+            </form>
         </div>
     </header>
-    
-        <section class="flex-conteiner"> 
-            <label class="titulo">Meus Dados</label><br>
-            <div id="content2" >
-                <label class="titulo" >Dados da conta</label>
-                <a href="https://www.w3schools.com" id="link_dados_conta">Precisa de ajuda com os dados da sua conta</a>
-            </div>
-            
-            <label class="box_campo" id="box_campo_usuario"><p >Usuario</p><img class="img_next" id ="img_next_usuario"src="../icons/next.svg" ></label>
-            
-            <p class="box_campo" id="box_campo_email">Email <img class="img_next" id ="img_next_email" src="../icons/next.svg" ></label>
-            <div id="content2">
-                <label class="titulo" id="estilo_dados_pessoais">Dados pessoais</label>
-                <a href="https://www.w3schools.com" id="link_dados_pessoais">Precisa de ajuda com os dados da sua conta</a>
-            </div>
-            
-            <label class="box_campo" id="box_campo_nome_completo" >Nome completo <img class="img_next"  id ="img_next_nome_completo" src="../icons/next.svg" ></label>
-            
-            <label class="box_campo" id="box_campo_documento">Documento <img class="img_next" id ="img_next_documento" src="../icons/next.svg" ></label>
-            <label class="box_campo" id="box_campo_telefone">Telefone <img class="img_next" id ="img_next_telefone"src="../icons/next.svg" ></label>
-            <div>
-            <label class="titulo" id="estilo_cartao">Cartões</label>
-        <div class="box_cartao">
-            <div class="titulo">
-
-                <img src="../icons/cartao.png" class="img_cartao_primeira">
-                <div class="cartao_dados_titulo">
-                    <p class="cartao_dados_subtitulo_primera">
-                        Terminado em 7859
-                    </p>
-                    <p class="cartao_dados_subtitulo_primiera_parte"> 
-                        Mastercard
-                    </p>
-                    <p class="cartao_dados_subtitulo_primiera_parte">
-                        Vencimento: 11/2050
-                    </p>
-                </div>
-                
-                
-           
-        
-    
-            </div>
-            <button class="excluir_segunda">Excluir</button>
+    <div class="meus-dados">
+        <h1 id="meus-dados">Meus Dados</h1>
+    </div>
+    <hr id="line">
+    <div class="meus-dados">
+        <h1 class="dados">Dados da conta</h1>
+    </div>
+    <section class="container-dados">
+        <div>
+            <input class="dados-conta"id="email" type="email" placeholder="E-mail:">
+            <hr/>
+            <input class="dados-conta" id="senha" type="password" placeholder="Senha:">
         </div>
-        <div id="box_cartao_segunda">
-            <div id="titulo_segunda">
-    
-                <img src="../icons/cartao.png" id="img_cartao_segunda">
-                <div class="cartao_dados_titulo">
-                    <p  id="cartao_dados_subtitulo_segunda">
-                        Terminado em 7859
-                    </p>
-                    <p class="cartao_dados_subtitulo_segunda_parte"> 
-                        Mastercard
-                    </p>
-                    <p class="cartao_dados_subtitulo_segunda_parte">
-                        Vencimento: 11/2050
-                    </p>
-                </div>
-                
-    
-            </div>
-            
-            <button class="excluir_segunda">Excluir</button>
+    </section>
+    <div class="meus-dados">
+        <h1 class="dados">Dados pessoais</h1>
+    </div>
+    <section class="container-dados" id="info-pessoais">
+        <div>
+            <input class="dados-conta"id="nome" type="text" placeholder="Nome completo:">
+            <hr/>
+            <input class="dados-conta" id="tel" type="number" placeholder="Telefone:">
+            <hr/>
+            <input class="dados-conta" id="data-nascimento" type="number" placeholder="Data de Nascimento:">
         </div>
-            
-        
-       <br><br>
-       <label class="titulo"  id="estilo_endereco" >Endereço</label>
-     
-       <div id="box_endereco">
-           <p class="paragrafo_primeiro_p1">Travessa Adalto Feitosa da Silva </p>
-               <p class="paragrafo_primeiro_p2">Pereira dos Santos 2300</p>
-                   <div class="titulo_endereco">
-   
-                       <p class="paragrafo_segunda_p1">Referencia: (Correio da cidade) Caixa postal 10
-                           </p>
-                           <p class="paragrafo_segunda_p2"> São Paulo(12290000), Campinas</p>
-                          <p id="paragrafo_segunda_p3">De Paula Carvalho Pinto - 16 997985469</p>
-                           
-   
-   
-                   </div>
-                   
-                  
-          </div>
-       
-                    
-                    <i class="material-icons" id="more_vert">more_vert</i>
-           </div>
-        
-               
-           <label  class="box_endereco_link" id="adicionar_link">Adicionar endereço <img class="img_next" id ="img_next_endereco" src="../icons/next.svg" ></label>
-          
-        <br>
-           
-     
-      
-        </section>
-        
-        
+    </section>
+    <div class="meus-dados">
+        <h1 class="dados">Endereço</h1>
+    </div>
+    <section class="container-dados" id="info-endereco">
+        <div>
+            <input class="dados-conta"id="rua" type="text" placeholder="Rua:">
+            <hr/>
+            <input class="dados-conta" id="num" type="number" placeholder="Número:">
+            <hr/>
+            <input class="dados-conta" id="Bairro" type="text" placeholder="Bairro:">
+            <hr/>
+            <input class="dados-conta" id="cep" type="number" placeholder="CEP:">
+            <hr/>
+            <input class="dados-conta" id="uf" type="text" placeholder="UF:">
+            <hr/>
+            <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:">
+            <hr/>
+            <input class="dados-conta" id="complemento" type="text" placeholder="Complemento:">
+        </div>
+    </section>
     <footer class="nav-footer">
         <div class="info-footer">
             <p>Termos e condições</p>
@@ -136,9 +83,8 @@
             <p>Sobre</p>
         </div>
         <div id="chat">
-            <img id="icon-footer" src="../icons/message.svg" alt="chat">
+            <img id="icon-footer" src="/front-end/icons/message.svg" alt="chat">
         </div>
     </footer>
-</body>
-
+    </body>
 </html>
