@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="/front-end/css/login.css">
+        <script src="../javaScript/utils/toasted.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src="../javaScript/utils/cript.js"></script>
+        <script src="/front-end/javaScript/login.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" id="email" name="email" placeholder="E-mail">
+            <input type="password" id="password" name="password" placeholder="Senha">
+            <div class="btns">
+                <button id='login' onclick="login()" type="button" name="button">Entrar</button>
+                <button id='cadastro' onclick="window.location.href = 'signup-page.html'" type="button" name="button">Cadastra-se</button>
+            </div>
+        </div>
+    </body>
+</html>
