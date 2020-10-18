@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/front-end/css/index.css">
     <link rel="stylesheet" type="text/css" href="/front-end/css/profile_page.css">
+    <script src="../javaScript/profile_page.js"></script>
     <title>Profile Page</title>
 </head>
 <body>
@@ -23,9 +24,8 @@
                     <img class="icon-header" id="icon-perfil" src="/front-end/icons/perfil.svg" alt="perfil">
                     Meu Perfil
                 </button>
-                <button id="btn-cadastre-se" type="input">
-                    <img class="icon-header" id="icon-compra" src="/front-end/icons/cart.svg" alt="carrinho">
-                    Compras</button>
+                <button id="btn-cadastre-se" type="input" onclick="logout()">
+                    Logout</button>
             </form>
         </div>
     </header>
