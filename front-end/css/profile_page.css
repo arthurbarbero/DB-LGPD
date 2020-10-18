@@ -1,0 +1,107 @@
+form {
+    margin-right: 156px;
+}
+
+
+form.buttons {
+    display: flex;
+    background-color: #C2A7C2;
+    box-shadow: none;
+    width: 420px;
+}
+
+.flex-conteiner{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+    width: 75%;
+    margin: 20px auto;
+    box-shadow: 2px 2px 4px 1px black;
+    padding-top: 15px;
+}
+
+#btn-login {
+    width: 125px;
+    margin-right: 50px;
+}
+
+.icon-header {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.meu-perfil{
+    display: flex;
+    width: 100%;
+}
+
+#meus-dados{
+    margin-left: 120px;
+    color: #4D4D65;
+    margin-top: 40px;
+}
+
+hr {
+    border: 0.5px solid #D8CEDF;
+    margin-top: 5px;
+    box-sizing:border-box;
+    width: 100%;
+}
+
+.dados {
+    margin-left: 120px;
+    color: #4D4D65;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.container-dados{
+    display:flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+    width: 78%;
+    margin: 20px auto;
+    box-shadow: 2px 2px 4px 1px black;
+}
+
+#info-pessoais {
+    height: 135px;
+}
+
+.dados-conta {
+    display: flex;
+    width: 70%;
+    font-size: 20px;
+    padding: 10px 0px;
+    margin-top: 5px;
+}
+
+#senha {
+    padding: 20px 0px 0px 0px;
+}
+
+#info-endereco {
+    height: 355px;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.input_nasc{
+    font-size: 20px;
+    height: 30px;
+    margin-top: 10px;
+    color: #757575;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/login-page.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <form id="search">
+            <input type="text" placeholder="Busque o que você deseja ">
+            <button type="submit">
+            <div id="icon">
+                <img id="icon_search" src="../icons/search.svg" alt="busca">
+            </div>
+             </button>
+        </form> 
+        <div class="nav-menu">
+            <button id="btn-login" type="input" >Login</button>
+            <button id="btn-cadastre-se" type="input" onclick="window.location.href='signup-page.html'">Cadastre-se</button>
+        </div>
+    </header>
+    <section id="flex-container">
+        <div id="cadastre">
+            <h1>Login</h1>
+        </div>
+        <div class="dados">
+            <label></label>
+            <input class="input_cadas" id="email" type="text" placeholder="usuario@gmail.com"/>
+            <input class="input_cadas" id="senha" type="password" placeholder="123456789"/>
+        </div>
+            <button class="btn" id="btn-entrar" type="input">Entrar</button>
+    </section>
+    <footer class="nav-footer">
+        <div class="info-footer">
+            <p>Termos e condições</p>
+            <p>Como protegemos sua privacidade</p>
+            <p>Contato</p>
+            <p>Sobre</p>
+        </div>
+        <div id="chat">
+            <img id="icon-footer" src="../icons/message.svg" alt="chat">
+        </div>
+    </footer>
+</body>
+</html>
