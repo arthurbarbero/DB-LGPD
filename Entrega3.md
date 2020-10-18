@@ -15,7 +15,7 @@ Com o avanço desta Sprint, podemos finalmente realizar o fluxo inteiro do proje
 
 **Front-end**
 
-Nesta Sprint foram realizadas as páginas de "Login" e "Meu perfil", realizando a entrega de dados pessoais como "e-mail" e "senha"  de forma criptografada, e retornando o ID vinculado ao banco, também de forma criptada. 
+Nesta Sprint foram realizadas as páginas de "Login" e "Meu perfil", realizando a entrega de dados pessoais como "e-mail" e "senha"  de forma criptografada, e retornando o ID vinculado ao banco, também de forma encriptada. 
 
 ![Login_Entrega_3](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/Login_Entrega_3.gif)
 
@@ -32,7 +32,7 @@ No Login, recebemos o email e senha criptografados, descriptografamos e verifica
 
 ![loginBack_Entrega_3](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/loginBack_Entrega_3.gif)
 
-Para a parte do "Perfil de usuário" utilizamos a rota 'getUser', recebendo o ID armazenado do usuário logado, fazemos uma pesquisa no banco pelo ID correspondete e retornamos os dados do usuário requisitado, descriptografamos com a chave Back-DB e encriptamos com o chave Front-Back, e devolvemos os dados ao front.
+Para a parte do "Perfil de usuário" utilizamos a rota 'getUser', recebendo o ID armazenado do usuário logado, fazemos uma pesquisa no banco pelo ID correspondente e retornamos os dados do usuário requisitado, descriptografamos com a chave Back-DB e encriptamos com o chave Front-Back, e devolvemos os dados ao front.
 
 ![getUserBack_Entrega](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/getUserBack_Entrega_3.gif)
 
