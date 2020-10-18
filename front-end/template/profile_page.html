@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/front-end/css/index.css">
     <link rel="stylesheet" type="text/css" href="/front-end/css/profile_page.css">
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../javaScript/utils/toasted.js"></script>
+    <script src="../javaScript/utils/cript.js"></script>
     <script src="../javaScript/profile_page.js"></script>
     <title>Profile Page</title>
 </head>
@@ -51,9 +56,7 @@
             <div>
                 <input class="dados-conta"id="nome" type="text" placeholder="Nome completo:" disabled>
                 <hr/>
-                <input class="dados-conta" id="tel" type="number" placeholder="Telefone:" disabled>
-                <hr/>
-                <input class="dados-conta input_nasc" id="data-nascimento" type="date" placeholder="Data de Nascimento:" disabled>
+                <input class="dados-conta input_nasc" id="data-nascimento" type="date" data-date-format="DD MMMM YYYY" placeholder="Data de Nascimento:" disabled>
             </div>
         </section>
         <div class="meus-dados">
@@ -61,19 +64,17 @@
         </div>
         <section class="container-dados" id="info-endereco">
             <div>
-                <input class="dados-conta"id="rua" type="text" placeholder="Rua:" disabled>
+                <input class="dados-conta" id="rua" type="text" placeholder="Rua:" disabled>
                 <hr/>
                 <input class="dados-conta" id="num" type="number" placeholder="Número:" disabled>
                 <hr/>
-                <input class="dados-conta" id="Bairro" type="text" placeholder="Bairro:" disabled>
+                <input class="dados-conta" id="bairro" type="text" placeholder="Bairro:" disabled>
                 <hr/>
                 <input class="dados-conta" id="cep" type="number" placeholder="CEP:" disabled>
                 <hr/>
                 <input class="dados-conta" id="uf" type="text" placeholder="UF:" disabled>
                 <hr/>
                 <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:" disabled>
-                <hr/>
-                <input class="dados-conta" id="complemento" type="text" placeholder="Complemento:" disabled>
             </div>
         </section>
     </section>
