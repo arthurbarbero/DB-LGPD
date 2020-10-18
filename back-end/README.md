@@ -19,7 +19,6 @@ OBS.: tenha certeza que está dentro da pasta /back-end
 
     ```
         conda install -c anaconda pycrypto
-        pip install -r requirements.txt
 
     ```
 
