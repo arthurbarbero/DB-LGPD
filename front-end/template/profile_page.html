@@ -29,51 +29,53 @@
             </form>
         </div>
     </header>
-    <div class="meus-dados">
-        <h1 id="meus-dados">Meus Dados</h1>
-    </div>
-    <hr id="line">
-    <div class="meus-dados">
-        <h1 class="dados">Dados da conta</h1>
-    </div>
-    <section class="container-dados">
-        <div>
-            <input class="dados-conta"id="email" type="email" placeholder="E-mail:">
-            <hr/>
-            <input class="dados-conta" id="senha" type="password" placeholder="Senha:">
+    <section class="flex-conteiner">
+        <div class="meus-dados">
+            <h1 id="meus-dados">Meus Dados</h1>
         </div>
-    </section>
-    <div class="meus-dados">
-        <h1 class="dados">Dados pessoais</h1>
-    </div>
-    <section class="container-dados" id="info-pessoais">
-        <div>
-            <input class="dados-conta"id="nome" type="text" placeholder="Nome completo:">
-            <hr/>
-            <input class="dados-conta" id="tel" type="number" placeholder="Telefone:">
-            <hr/>
-            <input class="dados-conta" id="data-nascimento" type="number" placeholder="Data de Nascimento:">
+        <hr id="line">
+        <div class="meus-dados">
+            <h1 class="dados">Dados da conta</h1>
         </div>
-    </section>
-    <div class="meus-dados">
-        <h1 class="dados">Endereço</h1>
-    </div>
-    <section class="container-dados" id="info-endereco">
-        <div>
-            <input class="dados-conta"id="rua" type="text" placeholder="Rua:">
-            <hr/>
-            <input class="dados-conta" id="num" type="number" placeholder="Número:">
-            <hr/>
-            <input class="dados-conta" id="Bairro" type="text" placeholder="Bairro:">
-            <hr/>
-            <input class="dados-conta" id="cep" type="number" placeholder="CEP:">
-            <hr/>
-            <input class="dados-conta" id="uf" type="text" placeholder="UF:">
-            <hr/>
-            <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:">
-            <hr/>
-            <input class="dados-conta" id="complemento" type="text" placeholder="Complemento:">
+        <section class="container-dados">
+            <div>
+                <input class="dados-conta" id="email" type="email" placeholder="E-mail:" disabled>
+                <hr/>
+                <input class="dados-conta" id="senha" type="password" placeholder="Senha:" value="123456789" disabled>
+            </div>
+        </section>
+        <div class="meus-dados">
+            <h1 class="dados">Dados pessoais</h1>
         </div>
+        <section class="container-dados" id="info-pessoais">
+            <div>
+                <input class="dados-conta"id="nome" type="text" placeholder="Nome completo:" disabled>
+                <hr/>
+                <input class="dados-conta" id="tel" type="number" placeholder="Telefone:" disabled>
+                <hr/>
+                <input class="dados-conta input_nasc" id="data-nascimento" type="date" placeholder="Data de Nascimento:" disabled>
+            </div>
+        </section>
+        <div class="meus-dados">
+            <h1 class="dados">Endereço</h1>
+        </div>
+        <section class="container-dados" id="info-endereco">
+            <div>
+                <input class="dados-conta"id="rua" type="text" placeholder="Rua:" disabled>
+                <hr/>
+                <input class="dados-conta" id="num" type="number" placeholder="Número:" disabled>
+                <hr/>
+                <input class="dados-conta" id="Bairro" type="text" placeholder="Bairro:" disabled>
+                <hr/>
+                <input class="dados-conta" id="cep" type="number" placeholder="CEP:" disabled>
+                <hr/>
+                <input class="dados-conta" id="uf" type="text" placeholder="UF:" disabled>
+                <hr/>
+                <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:" disabled>
+                <hr/>
+                <input class="dados-conta" id="complemento" type="text" placeholder="Complemento:" disabled>
+            </div>
+        </section>
     </section>
     <footer class="nav-footer">
         <div class="info-footer">
