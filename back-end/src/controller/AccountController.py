@@ -19,11 +19,11 @@ def register():
             email = obj.pop("email")
             password = obj.pop("password")
 
-            account = crypt_suite.encrypt(json_util.dumps(obj)).decode()
-            email = crypt_suite.encrypt(email).decode()
-            password = crypt_suite.encrypt(password).decode()
+            account = crypt_suite.encrypt(json_util.dumps(obj)).decode('latin-1', 'replace')
+            email = crypt_suite.encrypt(email).decode('latin-1', 'replace')
+            password = crypt_suite.encrypt(password).decode('latin-1', 'replace')
 
-            address = crypt_suite.encrypt(json_util.dumps(address)).decode()
+            address = crypt_suite.encrypt(json_util.dumps(address)).decode('latin-1', 'replace')
 
             addressObj = ModelAddress()
             addressObj.data = address
@@ -36,7 +36,7 @@ def register():
             accountObj.address = addressObj
             accountObj.save()
 
-            response = crypt_suite.encrypt(str(accountObj.id)).decode()
+            response = crypt_suite.encrypt(str(accountObj.id)).decode('latin-1', 'replace')
 
             return Response(json_util.dumps({"id" : response}), mimetype="application/json", status=200)
 
@@ -61,8 +61,8 @@ def login():
             accountObj = json_util.loads(ModelAccount.objects().only('email', 'password').to_json())
 
             for account in accountObj:
-                account['email'] = crypt_suite.decrypt(account['email']).decode()
-                account['password'] = crypt_suite.decrypt(account['password']).decode()
+                account['email'] = crypt_suite.decrypt(account['email']).decode('latin-1', 'replace')
+                account['password'] = crypt_suite.decrypt(account['password']).decode('latin-1', 'replace')
 
             email_list = list(filter(lambda account: account["email"] == email, accountObj))
 
@@ -72,7 +72,7 @@ def login():
             if email_list[0]['password'] != password:
                 return Response('{"Message":"Senha invalida"}', mimetype="application/json", status=404)
             
-            response = crypt_suite.encrypt(str(email_list[0]['_id'])).decode()
+            response = crypt_suite.encrypt(str(email_list[0]['_id'])).decode('latin-1', 'replace')
 
             return Response(json_util.dumps({"id" : response}), mimetype="application/json", status=200)
 
@@ -88,17 +88,18 @@ def get_user():
     
     if request.method == 'POST':
         crypt_suite = Crypt()
-        obj = crypt_suite.decrypt(request.json['id']).decode()
+        obj = crypt_suite.decrypt(request.json['id']).decode('latin-1', 'replace')
 
         try:
             response_object = {}
             account = json_util.loads(ModelAccount.objects.get(id=obj).to_json())
+            objAccount = json_util.loads(crypt_suite.decrypt(account["data"]).decode('latin-1', 'replace'))
+            objAccount['email'] = crypt_suite.decrypt(account["email"]).decode('latin-1', 'replace')
 
             address = json_util.loads(ModelAddress.objects.get(id=str(account['address'])).to_json())
 
-            response_object['email'] = crypt_suite.encrypt_front(crypt_suite.decrypt(account["email"]).decode()).decode()
-            response_object['account'] = crypt_suite.encrypt_front(crypt_suite.decrypt(account["data"]).decode()).decode()
-            response_object['address'] = crypt_suite.encrypt_front(crypt_suite.decrypt(address["data"]).decode()).decode()
+            response_object['account'] = crypt_suite.encrypt_front(json_util.dumps(objAccount)).decode('latin-1', 'replace')
+            response_object['address'] = crypt_suite.encrypt_front(crypt_suite.decrypt(address["data"]).decode('latin-1', 'replace')).decode('latin-1', 'replace')
 
             return Response(json_util.dumps(response_object), mimetype="application/json", status=200)
 
