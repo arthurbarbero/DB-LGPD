@@ -1,5 +1,5 @@
 window.onload = () => {
-    if (localStorage.getItem('user_id')) {
+    if ( localStorage.getItem('user_id') ) {
         let navMenu = document.getElementById('nav-menu')
         
         let signup = document.getElementById('btn-cadastre-se')
@@ -11,7 +11,7 @@ window.onload = () => {
         let meuPerfil = document.createElement('button')
         meuPerfil.setAttribute("id", "btn-login" )
         meuPerfil.setAttribute("type", "input" )
-        meuPerfil.setAttribute("onclick", "window.location.href = 'profile_page.html'" )
+        meuPerfil.setAttribute("onclick", "window.location.href = '/front-end/template/profile_page.html'" )
 
         let img = document.createElement('img')
         img.setAttribute("class", "icon-header")
