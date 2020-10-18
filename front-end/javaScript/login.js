@@ -11,12 +11,10 @@ async function login() {
     
     await axios.post('http://127.0.0.1:5000/account/login', {'data': data}, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
     .then(response => {
-        console.log(response.data)
         localStorage.setItem('user_id', response.data.id);
         window.location.href = 'homepage.html';
     })
     .catch(response => { 
-        console.log(response)
         setToasted(false, 'Failed to do sign-in');
     })
 }
