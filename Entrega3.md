@@ -40,7 +40,7 @@ Para a parte do "Perfil de usuário" utilizamos a rota 'getUser', recebendo o ID
 ### Deploy
 
 Para este projeto foram criadas máquinas AWS para cada frente, back-end, front-end e banco de dados. Em cada uma com sistema operacional Linux e web server Nginx. 
-O resultado final com as features mencionadas acima e demais Sprints funcionamento podem ser conferidas em [SITE](http://ec2-18-229-143-134.sa-east-1.compute.amazonaws.com/)
+O resultado final com as features mencionadas acima e demais Sprints podem ser conferidas em [SITE](http://ec2-18-229-143-134.sa-east-1.compute.amazonaws.com/)
 
 Cada máquina AWS, além de contar com toda a segurança de um dos maiores servidores de Cloud Machine, possui acesso exclusivo via SSH somente com os pares de chaves registrados em cada máquina.
 
