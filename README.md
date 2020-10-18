@@ -78,12 +78,13 @@ Após a criação de um "boilerplate" para ambas as frentes, front e back-end, i
 
 Com a criptografia simétrica da aplicação realizada e persistindo no Banco de Dados de forma segura, esta entrega irá focar na finalização das demais páginas e rotas, 
 
-- Validação dos dados; (Back-end) :yellow_circle:
-- Criação das rotas de Sign-in; (Back-end) :yellow_circle:
-- Criação da Sign-in Page; (Front-end) :yellow_circle:
-- Criação de rota para Profile Page (Back-end) :large_blue_circle:
-- Criação da Profile Page (Front-end) :large_blue_circle:
+- Validação dos dados; (Back-end) :yellow_circle: :heavy_check_mark:
+- Criação das rotas de Sign-in; (Back-end) :yellow_circle: :heavy_check_mark:
+- Criação da Sign-in Page; (Front-end) :yellow_circle: :heavy_check_mark:
+- Criação de rota para Profile Page (Back-end) :large_blue_circle: :heavy_check_mark:
+- Criação da Profile Page (Front-end) :large_blue_circle: :heavy_check_mark:
 
+[Entrega 3](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega3.md)
 
 ### Sprint 4 - 19/10 A 01/11:
 
