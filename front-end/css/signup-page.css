@@ -161,7 +161,7 @@ button {
     text-align: center;
 }
 
-#cel{
+.input_cel{
     font-size: medium;
     width: 35%;
     height: 30px;
@@ -235,4 +235,7 @@ textarea:focus, input:focus {
         color: #fff;
         margin-top: 50px;
     }
+}
+.span{
+    border-bottom: solid 1px red;
 }

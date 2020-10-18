@@ -42,3 +42,12 @@
     background: #4D4D65;
     margin-top: 10px;
 }
+
+.icon-header {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-top: 4px;
+}

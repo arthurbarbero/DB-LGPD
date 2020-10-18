@@ -9,7 +9,7 @@ async function sendData(jsonData) {
         localStorage.setItem("user_id", resp.data.id)
 
         setTimeout(function() {
-            window.location.href = '/front-end/template/homepage.html' }, 3500);
+            window.location.href = '../../index.html' }, 3500);
     })
     .catch(err => {
         setToasted(false, 'Failed to register use');
@@ -18,12 +18,19 @@ async function sendData(jsonData) {
 }
 
 function getInputsById() {
-    let cliente = new Object();
+    var cliente = new Object();
 
+    let aux = []
     idInputs.forEach(idElemento => {
-        cliente[idElemento] = document.getElementById(idElemento).value;
+        document.getElementById(idElemento).classList.remove("span")
+        if (document.getElementById(idElemento).value != ""){
+            cliente[idElemento] = document.getElementById(idElemento).value;
+        }else{
+            document.getElementById(idElemento).classList.add("span")
+            aux.push(idElemento)
+        }
     });
-
+    
     cliente = encrypt(JSON.stringify(
         {
             first_name: cliente.nome,
@@ -41,9 +48,28 @@ function getInputsById() {
             }
         }
     ));
-    return cliente;
+    if (aux.length <= 0 ){
+
+        return cliente;
+
+    }else{
+
+        setToasted(false, 'Preencha todos os campos corretamente !');
+    }
 }
+
 async function saveData() {
     let cliente = getInputsById();
-    sendData(cliente);
+
+    if (cliente != null){
+        sendData(cliente);
+    }
 }
+
+async function onFocusLoose(element) {
+    let hasclass = element.classList.value
+    
+    if (element.value && hasclass.includes("span")) {
+        element.classList.remove('span');
+    }
+};

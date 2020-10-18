@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/front-end/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/front-end/css/profile_page.css">
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../javaScript/utils/toasted.js"></script>
+    <script src="../javaScript/utils/cript.js"></script>
+    <script src="../javaScript/profile_page.js"></script>
+    <title>Profile Page</title>
+</head>
+<body>
+    <header>
+        <form id="search">
+            <input type="text" placeholder="Busque o que você deseja ">
+            <button type="submit">
+                <div id="icon">
+                    <img id="icon_search" src="/front-end/icons/search.svg" alt="busca">
+                </div>
+             </button>
+        </form> 
+        <div class="nav-menu">
+            <form class="buttons">
+                <button id="btn-login" type="input">
+                    <img class="icon-header" id="icon-perfil" src="/front-end/icons/perfil.svg" alt="perfil">
+                    Meu Perfil
+                </button>
+                <button id="btn-cadastre-se" type="input" onclick="logout()">
+                    Logout</button>
+            </form>
+        </div>
+    </header>
+    <section class="flex-conteiner">
+        <div class="meus-dados">
+            <h1 id="meus-dados">Meus Dados</h1>
+        </div>
+        <hr id="line">
+        <div class="meus-dados">
+            <h1 class="dados">Dados da conta</h1>
+        </div>
+        <section class="container-dados">
+            <div>
+                <input class="dados-conta" id="email" type="email" placeholder="E-mail:" disabled>
+                <hr/>
+                <input class="dados-conta" id="senha" type="password" placeholder="Senha:" value="123456789" disabled>
+            </div>
+        </section>
+        <div class="meus-dados">
+            <h1 class="dados">Dados pessoais</h1>
+        </div>
+        <section class="container-dados" id="info-pessoais">
+            <div>
+                <input class="dados-conta"id="nome" type="text" placeholder="Nome completo:" disabled>
+                <hr/>
+                <input class="dados-conta input_nasc" id="data-nascimento" type="date" data-date-format="DD MMMM YYYY" placeholder="Data de Nascimento:" disabled>
+            </div>
+        </section>
+        <div class="meus-dados">
+            <h1 class="dados">Endereço</h1>
+        </div>
+        <section class="container-dados" id="info-endereco">
+            <div>
+                <input class="dados-conta" id="rua" type="text" placeholder="Rua:" disabled>
+                <hr/>
+                <input class="dados-conta" id="num" type="number" placeholder="Número:" disabled>
+                <hr/>
+                <input class="dados-conta" id="bairro" type="text" placeholder="Bairro:" disabled>
+                <hr/>
+                <input class="dados-conta" id="cep" type="number" placeholder="CEP:" disabled>
+                <hr/>
+                <input class="dados-conta" id="uf" type="text" placeholder="UF:" disabled>
+                <hr/>
+                <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:" disabled>
+            </div>
+        </section>
+    </section>
+    <footer class="nav-footer">
+        <div class="info-footer">
+            <p>Termos e condições</p>
+            <p>Como protegemos sua privacidade</p>
+            <p>Contato</p>
+            <p>Sobre</p>
+        </div>
+        <div id="chat">
+            <img id="icon-footer" src="/front-end/icons/message.svg" alt="chat">
+        </div>
+    </footer>
+    </body>
+</html>
