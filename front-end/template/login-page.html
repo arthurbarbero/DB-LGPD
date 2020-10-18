@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/login-page.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="../javaScript/utils/toasted.js"></script>
+    <script src="../javaScript/utils/cript.js"></script>
+    <script src="../javaScript/login.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -28,9 +33,9 @@
         <div class="dados">
             <label></label>
             <input class="input_cadas" id="email" type="text" placeholder="usuario@gmail.com"/>
-            <input class="input_cadas" id="senha" type="password" placeholder="123456789"/>
+            <input class="input_cadas" id="password" type="password" placeholder="123456789"/>
         </div>
-            <button class="btn" id="btn-entrar" type="input">Entrar</button>
+            <button class="btn" id="btn-entrar" type="input" onclick="login()">Entrar</button>
     </section>
     <footer class="nav-footer">
         <div class="info-footer">
