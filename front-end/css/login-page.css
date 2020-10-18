@@ -1,14 +1,18 @@
 :root {
     --color-header: #C2A7C2;
 }
+
 *{
     margin: 0;
     padding: 0;
 }
+
 html, 
+
 body {
     height: 100%;
 }
+
 header {
     background-color: var(--color-header);
     height: 15vh;
@@ -26,14 +30,15 @@ form {
     background-color:  #fff;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 input {
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: #fff;
     border: 0 rgba(0,0,0,.2);
-    width: 527px;
+    width: 75%;
     height: 20px;
     font-size: 16px;
-    margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 #icon_search {
@@ -42,6 +47,7 @@ input {
     background-color: #fff;
     outline: 0px;
 }
+
 .nav-menu {
     width: 300px;
 }
@@ -67,6 +73,7 @@ button {
     margin-left: 40px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #btn-cadastre-se{
     width: 125px;
     height: 40px;
@@ -98,8 +105,8 @@ button {
     color: #4C4C5B;
 }
 
-.btn{
-    width: 450px;
+.btn {
+    width: 75%;
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -110,6 +117,7 @@ button {
     font-size: 20px;
     border-radius: 3px;
 }
+
 #btn-manual {
     background-color: #DFDFDF;
 }
@@ -147,4 +155,25 @@ button {
 #icon-footer {
     width: 40px;
     height: 40px;
+}
+
+.input_cadas{
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0 rgba(0,0,0,.2);
+    width: 75%;
+    height: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.dados{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-around;
 }
