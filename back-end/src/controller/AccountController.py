@@ -148,3 +148,21 @@ def setUser():
     else:
         return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=405)
     
+@bp.route('/delUser', methods=['POST'])
+def del_user():
+
+    crypt_suite = Crypt()
+    obj = crypt_suite.decrypt(request.json['id']).decode('latin-1', 'replace')
+
+    try:
+        account = ModelAccount.objects.get(id=obj)
+    
+        account.address.delete()
+
+        account.delete()
+
+        return Response('{"message":"Ok"}', mimetype="application/json", status=200)
+
+    except Exception as error:
+        res = {'Message':'Falha enviar o Id solicitado', 'error': str(error)}
+        return Response(json_util.dumps(res), mimetype='application/json', status=500) 
