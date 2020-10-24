@@ -1,6 +1,11 @@
-const BASE_URL = 'http://ec2-52-67-163-45.sa-east-1.compute.amazonaws.com'
+const BASE_URL = 'http://127.0.0.1:5000'
 const idInputs = ['nome', 'sobrenome', 'email', 'senha', 'ddd', 'cel', 'nasc', 'cpf', 'rua', 'bairro', 'cep', 'numeros', 'estado', 'cidade', 'complemento'];
 
+window.onload = () => {
+    if ( localStorage.getItem('user_id') ) {
+        window.location.href = '../../index.html';
+    }
+}
 
 async function sendData(jsonData) {
     return axios.post(`${BASE_URL}/account/register`, { data: jsonData }, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})

@@ -9,7 +9,7 @@ async function login() {
     const password = document.querySelector('#password');
     const data = encrypt(JSON.stringify({'email': email.value, 'password': password.value}));
     
-    await axios.post('http://ec2-52-67-163-45.sa-east-1.compute.amazonaws.com/account/login', {'data': data}, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
+    await axios.post('http://127.0.0.1:5000/account/login', {'data': data}, {headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
     .then(response => {
         localStorage.setItem('user_id', response.data.id);
         window.location.href = '../../index.html';
