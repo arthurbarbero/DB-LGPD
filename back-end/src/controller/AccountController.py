@@ -1,5 +1,6 @@
 from flask import Blueprint, Response, request
 from bson import json_util
+from datetime import datetime
 
 from src.model.account import Account as ModelAccount
 from src.model.address import Address as ModelAddress
@@ -110,44 +111,43 @@ def get_user():
     else:
         return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=405)
 
-@bp.route('/setUser', methods=['POST', 'GET', 'PUT'])
+@bp.route('/setUser', methods=['PUT'])
 def setUser():
-    if request.method == 'PUT':
-        crypt_suite = Crypt()
-        obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
-        
-        try:
-            idUser = crypt_suite.decrypt(obj.pop("id")).decode('latin-1', 'replace')
-            address = obj.pop("address")
-            email = obj.pop("email")
-            password = obj.pop("password")
-
-            account = crypt_suite.encrypt(json_util.dumps(obj)).decode('latin-1', 'replace')
-            email = crypt_suite.encrypt(email).decode('latin-1', 'replace')
-            password = crypt_suite.encrypt(password).decode('latin-1', 'replace')
-
-            address = crypt_suite.encrypt(json_util.dumps(address)).decode('latin-1', 'replace')
-
-            addressObj = ModelAddress(id=idUser)
-            addressObj.data = address
-            addressObj = addressObj.save()
-
-            accountObj = ModelAccount(id=idUser)
-            accountObj.email = email
-            accountObj.password = password
-            accountObj.data = account
-            accountObj.address = addressObj
-            accountObj.save()
-
-            return Response(json_util.dumps({"Status" : "Success"}), mimetype="application/json", status=200)
-
-
-        except Exception as error:
-            res = {'Message':'Falha na inserção do usuário', 'error': str(error)}
-            return Response(json_util.dumps(res), mimetype='application/json', status=500)
-    else:
-        return Response('{"error":"Method not allowed, use POST"}', mimetype="application/json", status=405)
+    crypt_suite = Crypt()
+    obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
     
+    try:
+        idUser = crypt_suite.decrypt(obj.pop("id")).decode('latin-1', 'replace')
+        address = obj.pop("address")
+        email = obj.pop("email")
+        password = obj.pop("password")
+
+        account = crypt_suite.encrypt(json_util.dumps(obj)).decode('latin-1', 'replace')
+        email = crypt_suite.encrypt(email).decode('latin-1', 'replace')
+        password = crypt_suite.encrypt(password).decode('latin-1', 'replace')
+        address = crypt_suite.encrypt(json_util.dumps(address)).decode('latin-1', 'replace')
+
+        
+        accountObj = ModelAccount.objects.get(id=idUser)
+        accountObj.email = email
+        accountObj.password = password
+        accountObj.data = account
+        accountObj.updated_at = datetime.utcnow
+
+        addressObj = ModelAddress(id=str(accountObj.address.id))
+        addressObj.data = address
+        addressObj.updated_at = datetime.utcnow
+        
+        accountObj.save()
+        addressObj.save()
+        return Response(json_util.dumps({"Status" : "Success"}), mimetype="application/json", status=200)
+
+
+    except Exception as error:
+        res = {'Message':'Falha na inserção do usuário', 'error': str(error)}
+        return Response(json_util.dumps(res), mimetype='application/json', status=500)
+
+
 @bp.route('/delUser', methods=['POST'])
 def del_user():
 

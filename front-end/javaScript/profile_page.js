@@ -4,7 +4,7 @@ window.onload = async () => {
     } else {
         let user_id = localStorage.getItem('user_id')
 
-        await axios.post('http://127.0.0.1:5000/account/getUser', { 'id': user_id }, { headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
+        await axios.post('http://ec2-52-67-163-45.sa-east-1.compute.amazonaws.com/account/getUser', { 'id': user_id }, { headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})
         .then(response => {
 
             response.data.account = JSON.parse(decrypt(response.data.account))
