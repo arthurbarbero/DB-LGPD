@@ -62,14 +62,14 @@ Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System
   Antes de aprofundarmos no método, primeiramente devemos entender o conceito de bloco IV.
   
   
-    - IV - Vetor de Inicialização:
-      O vetor de inicialização pode ser entendido como um “bloco falso”, utilizado no início do processo de cifragem, gerando aleatoriedade no sistema.
-      
-      
-    - Método:
-      O método CBC consiste na criptografia de cada bloco de plaintext junto com o bloco cifrado anterior, antes dele ser criptografado. Com isso os blocos futuros são dependentes dos blocos anteriores. Com IV aleatório em cada cifragem, é possível manter a aleatoriedade do ciphertext mesmo com um plaintext igual.
-      
-      ![Método_CBC](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/aes-Algoritmo-CBC.png)
+   - IV - Vetor de Inicialização:
+     O vetor de inicialização pode ser entendido como um “bloco falso”, utilizado no início do processo de cifragem, gerando aleatoriedade no sistema.
+
+
+   - Método:
+     O método CBC consiste na criptografia de cada bloco de plaintext junto com o bloco cifrado anterior, antes dele ser criptografado. Com isso os blocos futuros são dependentes dos blocos anteriores. Com IV aleatório em cada cifragem, é possível manter a aleatoriedade do ciphertext mesmo com um plaintext igual.
+
+     ![Método_CBC](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/aes-Algoritmo-CBC.png)
       
 A utilização do método CBC foi escolhida entre as demais por ser a melhor a questão de aleatoriedade. Mesmo que passemos o bloco IV no início de sua criptografia, sendo este gerado de maneira aleatória, conseguimos cifras diferentes para um mesmo registro, pelo uso de criptografias passadas conforme na imagem.
 
