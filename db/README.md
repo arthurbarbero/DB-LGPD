@@ -27,7 +27,11 @@ Em toda a aplicação em produção não é necessário realizar nenhuma instala
   
   ## Exemplo de configuração no firewall Linux com vinculação a apenas um IP:
   
-  - Instale ou atualize o UFW:
+   Instale ou atualize o UFW:
+   ```
+    sudo apt update
+    sudo apt install ufw
+   ```
   
    Para configurar o firewall no servidor de forma a aceitar apenas requisições de Ip's listados, contamos com a ajuda do UFW, nativo na maioria dos sistemas Linux, porém, também inativos na maioria dos computadores pessoais, verifiquemos que este esta ativo com o comando: 
    ```
