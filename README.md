@@ -71,7 +71,7 @@ Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System
 
      ![Método_CBC](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/aes-Algoritmo-CBC.png)
       
-A utilização do método CBC foi escolhida entre as demais por ser a melhor a questão de aleatoriedade. Mesmo que passemos o bloco IV no início de sua criptografia, sendo este gerado de maneira aleatória, conseguimos cifras diferentes para um mesmo registro, pelo uso de criptografias passadas conforme na imagem.
+A utilização do método CBC foi escolhida entre as demais por ser a melhor em questão de aleatoriedade. Mesmo que passemos o bloco IV no início de sua criptografia, sendo este gerado de maneira aleatória, conseguimos cifras diferentes para um mesmo registro, pelo uso de criptografias passadas conforme na imagem.
 
 
 Backlog
@@ -138,7 +138,7 @@ Reservada para possíveis consertos e criação da apresentação final. :large_
 Tecnologias empregadas
 -------------
 
-- Python 3.6 + Flask Web Framework
+- Python + Flask Web Framework
 
   Utilizamos a framework Flask para construir uma API Restful, um back-end robusto para servir como ponte entre o usuário e o banco de dados de forma criptografada.
   
