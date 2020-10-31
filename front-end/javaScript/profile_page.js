@@ -42,3 +42,45 @@ function logout() {
         window.location.reload()
     }
 }
+
+async function deleteAccount() {
+    Swal.fire({
+        title: 'Você tem certeza?',
+        text: 'Após deletar sua conta, não será possível reverter o processo, todos os dados serão apagados!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, deletar!',
+        cancelButtonText: 'Não, cancelar!'
+      }).then(async (result) => {
+            if (result.value) {
+                let user_id = await localStorage.getItem('user_id')
+
+                axios.post('http://ec2-52-67-163-45.sa-east-1.compute.amazonaws.com/account/delUser', { 'id': user_id }, { headers: { 'Access-Control-Allow-Origin':'*', 'Content-Type': 'application/json' }})                
+                .then((response)=>{
+                    if(response.status === 200) {
+                        logout()
+                        window.location.href = '../../index.html'
+
+                    } else {
+                        Swal.fire({
+                            title: 'ERROR',
+                            text: 'Ocorreu um erro, tente novamente',
+                            icon: 'error',
+                            showCancelButton: true,
+                            cancelButtonText: 'Ok :(',
+                            showConfirmButton: false
+                        })
+                    }
+                }).catch((error)=> {
+                    Swal.fire({
+                        title: 'ERROR',
+                        text: 'Ocorreu um erro, tente novamente',
+                        icon: 'error',
+                        showCancelButton: true,
+                        cancelButtonText: 'Ok :(',
+                        showConfirmButton: false
+                    })
+                })
+            }
+      })
+}
