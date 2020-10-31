@@ -23,3 +23,54 @@ Em toda a aplicação em produção não é necessário realizar nenhuma instala
  ```
  
   - Após a criação do usuário, registre as credenciais no back-end, de acordo com o especificado em [Back-end](https://github.com/arthurbarbero/DB-LGPD/tree/master/back-end)
+  
+  
+  ## Exemplo de configuração no firewall Linux com vinculação a apenas um IP:
+  
+   Instale ou atualize o UFW:
+   ```
+    sudo apt update
+    sudo apt install ufw
+   ```
+  
+   Para configurar o firewall no servidor de forma a aceitar apenas requisições de Ip's listados, contamos com a ajuda do UFW, nativo na maioria dos sistemas Linux, porém, também inativos na maioria dos computadores pessoais, verifiquemos que este esta ativo com o comando: 
+   ```
+    sudo ufw status
+   ```
+  
+   Caso a resposta seja ``Status: inative`` utilize o comando ``sudo ufw enable``, mas antes realize as seguintes permissões para conexões SSH:
+   ```
+    sudo ufw allow ssh
+    
+    sudo ufw allow 2222
+   ```
+   
+   Agora realize as permissões para o IP da máquina e a porta padrão MongoDB, ou outra porta que tenha escolhido na instalação do MongoDB:
+   ```
+    sudo ufw allow from <ip.da.sua.máquina> to any port 27017
+   ```
+   
+   Ao final rode o comando para inicializar o funcionamento do Firewall, ou  verifique se as permissões foram criadas corretamente com os comandos:
+   ```
+    sudo ufw enable
+    
+    sudo ufw status
+   ```
+   
+   A saída esperada será algo assim:
+   ```
+    Status: active
+
+    To                         Action      From
+    --                         ------      ----
+    22/tcp                     ALLOW       Anywhere
+    22                         ALLOW       Anywhere
+    2222                       ALLOW       Anywhere
+    27017                      ALLOW       <ip.da.sua.máquina>
+    22/tcp (v6)                ALLOW       Anywhere (v6)
+    22 (v6)                    ALLOW       Anywhere (v6)
+    2222 (v6)                  ALLOW       Anywhere (v6)
+   
+   ```
+   
+   Pronto, Firewall configurado.
