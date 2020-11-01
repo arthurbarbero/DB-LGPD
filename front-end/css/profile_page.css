@@ -28,6 +28,31 @@ form.buttons {
     margin-right: 50px;
 }
 
+#btn-edit {
+    width: 125px;
+    height: 40px;
+    background-color: #D8CEDF;
+    color: #4D4D65;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    margin-left: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+#btn-delete {
+    width: 125px;
+    height: 40px;
+    background-color: #4D4D65;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
 .icon-header {
     width: 25px;
     height: 25px;
@@ -108,9 +133,9 @@ textarea:focus, input:focus, select:focus {
 
 #options-btn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 93%;
+    width: 100%;
 
 }
