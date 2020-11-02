@@ -124,7 +124,10 @@ Com a criptografia simétrica da aplicação realizada e persistindo no Banco de
 Após as entregas acima, utilizaremos desta sprint para finalizar o restante das tarefas e consertar quaisquer passos anteriores que estejam fora do padrão requisitado pelo cliente.
 
 - Criação de rota para Editar o usuário (Back-end) :large_blue_circle:
+- Criação de rota para Deletar o usuário (Back-end) :large_blue_circle:
 - Ajustes na Profile Page para suportar a edição e exclusão simples (Front-end) :large_blue_circle:
+
+[Entrega 4](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega4.md)
 
 ### Sprint 5 - 02/11 A 15/11:
 
