@@ -45,10 +45,9 @@ Quando o dado é anonimizado, mas é dada a possibilidade de voltar a sua forma 
 
 Técnicas utilizadas
 ------------
-Dada a resolução do problema, decidimos implementar um algoritmo  de criptografia simétrica simples que resolve a questão do armazenamento seguro de informações pessoais de forma anonimizada.
+Dada a resolução do problema, decidimos implementar um algoritmo  de criptografia simétrica simples que resolve a questão do armazenamento seguro de informações pessoais de forma anonimizada. Ao se cadastrar no site, para cada usuário é criada uma chave simétrica simples e é armazenada dentro de um banco de dados de chaves criptografadas, separado do banco de dados pessoais.
 
-
-Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System), utilizando uma senha com um tamanho de 256 bits e o método de criptografia em bloco no modelo CBC (Cypher Block Chaining).
+Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System), utilizando uma senha com um tamanho de 256 bits e o método de criptografia em bloco no modelo CBC (Cypher Block Chaining). Também utilizamos o serviço [Vault](https://www.vaultproject.io/) para o armazenamento destas chaves para cada usuário.
  
  - AES
  
@@ -72,6 +71,11 @@ Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System
      ![Método_CBC](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/aes-Algoritmo-CBC.png)
       
 A utilização do método CBC foi escolhida entre as demais por ser a melhor em questão de aleatoriedade. Mesmo que passemos o bloco IV no início de sua criptografia, sendo este gerado de maneira aleatória, conseguimos cifras diferentes para um mesmo registro, pelo uso de criptografias passadas conforme na imagem.
+
+- Vault
+  
+  Aplicação que oferece uma interface via linha de comandos e via requisição http para armazenamento de ``chave=valor`` de forma criptografada. Ela é responsável por vincular ao ID de registro do usuário cadastrado a chave gerada aleatóriamente, utilizada no processo de encriptação do usuário, fazendo a chave=valor ``id=crypt_key``, para que posteriomente quando o back-end necessite visualizar os dados, possa pegar a chave pelo id do usuário.
+
 
 
 Backlog
@@ -123,15 +127,19 @@ Com a criptografia simétrica da aplicação realizada e persistindo no Banco de
 
 Após as entregas acima, utilizaremos desta sprint para finalizar o restante das tarefas e consertar quaisquer passos anteriores que estejam fora do padrão requisitado pelo cliente.
 
-- Criação de rota para Editar o usuário (Back-end) :large_blue_circle:
-- Criação de rota para Deletar o usuário (Back-end) :large_blue_circle:
-- Ajustes na Profile Page para suportar a edição e exclusão simples (Front-end) :large_blue_circle:
+- Criação de rota para Editar o usuário (Back-end) :large_blue_circle: :heavy_check_mark:
+- Criação de rota para Deletar o usuário (Back-end) :large_blue_circle: :heavy_check_mark:
+- Ajustes na Profile Page para suportar a edição e exclusão simples (Front-end) :large_blue_circle: :heavy_check_mark:
 
 [Entrega 4](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega4.md)
 
 ### Sprint 5 - 02/11 A 15/11:
 
-Reservada para possíveis consertos e criação da apresentação final. :large_blue_circle:
+- Implementação de chave de criptografia por usuário (Back-end) :red_circle:
+  
+  - Para tornar a criptografia entre o back-end e o banco de dados pessoais mais forte e segura, foi requisitado que fosse implementado algum tipo de chaves simétricas únicas por usuário. Utilizamos do serviço **Vault** para o armazenamento das mesmas.
+  
+- Finalização da página privacy-page (Front-end) :large_blue_circle:
 
 
 ### Sprint 6 - 16/11 A 29/11:
@@ -147,9 +155,11 @@ Tecnologias empregadas
   
   Dentro do projeto criamos uma classe em python para manipular todas as interações com métodos de criptografia, [a classe pode ser analisada clicando aqui](https://github.com/arthurbarbero/DB-LGPD/blob/master/back-end/src/model/utils/crypto.py).
   
-  A classe crypto.py utiliza a biblioteca [pycrypto](https://github.com/pycrypto/pycrypto), fazendo uso de suas classes 'AES' e 'Random', recebemos uma 'String' com codificação base64 e criptografamos utilizando um bloco IV gerado aleatoriamente, uma chave de tamanho 256 bits que está armazenada no arquivo ``.env`` não versionado por questões de segurança e o método ``AES.MODE_CBC`` que realiza a combinação de cifras anteriores, conforme mencionada no tópico de Técnicas utilizadas.
+  A classe crypto.py utiliza a biblioteca [pycrypto](https://github.com/pycrypto/pycrypto), fazendo uso de suas classes 'AES' e 'Random', recebemos uma 'String' com codificação base64 e criptografamos utilizando um bloco IV gerado aleatoriamente, uma chave de tamanho 256 bits que também será gerada aleatóriamente e o método ``AES.MODE_CBC`` que realiza a combinação de cifras anteriores, conforme mencionada no tópico de Técnicas utilizadas.
   
-  A forma de decriptografia age da mesma maneira, recebe uma 'String' com codificação base64, retiramos o bloco IV, e com a mesma chave e método ``AES.MODE_CBC`` deciframos a mensagem.
+  Esta chave, no momento de sua criação, é salva na aplicação local **Vault**, sua [classe pode ser analisada clicando aqui](https://github.com/arthurbarbero/DB-LGPD/blob/crypt_by_user/back-end/src/model/utils/vault.py), o método recebe as informações do ID do registro do usuário que esta sendo criado e sua chave recém gerada e armazena em seu banco local criptografado após a confirmação de suas três chaves para destravar o acesso a aplicação, este [método pode ser analisado clicando aqui](https://github.com/arthurbarbero/DB-LGPD/blob/crypt_by_user/back-end/src/model/utils/vault.py#L59-L67).
+  
+  A forma de decriptografia age da mesma maneira, recebe uma 'String' com codificação base64, retiramos o bloco IV, e com a mesma chave, recuperada do banco de chaves **Vault** pelo ID de registro do usuário, e método ``AES.MODE_CBC`` deciframos a mensagem.
 
 - MongoDB
 
