@@ -1,15 +1,18 @@
 import os
 import json
 from requests import Request, Session, codes
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 NO_CONNECTION = "Sem conexão com o servidor"
 
-TOKEN = os.environ.get('TOKEN', None)
+TOKEN = os.getenv('TOKEN')
 
 KEYS = [
-    os.environ.get('KEY1', None),
-    os.environ.get('KEY2', None),
-    os.environ.get('KEY3', None),
+    os.getenv('KEY1'),
+    os.getenv('KEY2'),
+    os.getenv('KEY3'),
 ]
 
 class Commands:

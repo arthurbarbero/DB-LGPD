@@ -8,7 +8,6 @@ class Crypt:
 
     def __init__(self):
         self.key_front = os.getenv('CRYPT_KEY_FRONT').encode()
-        self.key_back = os.getenv('CRYPT_KEY_BACK').encode()
         self.block_size = 16
         self.commands = Commands()
     
