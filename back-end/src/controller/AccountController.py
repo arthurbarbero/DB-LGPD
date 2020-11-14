@@ -16,7 +16,7 @@ def register():
     if request.method == 'POST':
         crypt_suite = Crypt()
         obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
-        # Realizar as validações
+        
         try:
             address = obj.pop("address")
             email = obj.pop("email")
