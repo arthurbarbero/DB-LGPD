@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javaScript/homepage.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/privacy-page.css">
+    <title>Homepage</title>
+</head>
+<body>
+    <header>
+        <form id="search">
+            <input type="text" placeholder="Busque o que você deseja ">
+            <button type="submit">
+            <div id="icon">
+                <img id="icon_search" src="../icons/search.svg" alt="busca">
+            </div>
+             </button>
+        </form>
+        <div id="nav-menu" class="nav-menu">
+            <button id="btn-login" type="input" onclick="window.location.href='../template/login-page.html'">Login</button>
+            <button onclick="window.location.href='../template/signup-page.html'" id="btn-cadastre-se" type="input">Cadastre-se</button>
+        </div>
+    </header>
+
+    <div class="flex-container">
+        <div id="privacidade">
+            <h1>Privacidade</h1>
+        </div>
+        <hr/>
+        <div id="conteudo">
+            <img id="img-seguranca" src="../icons/segurança.png" alt="img-seguranca">
+            <h2 id="title-privacidade">Sua privacidade, seus direitos e o   nosso compromisso</h2>
+            <p>Usamos seus dados para criar ferramentas que facilitam o seu dia a dia.</p>
+        </div>
+    </div>
+    <div id="texto">
+        <h3>Política de Privacidade</h3>
+        <p class="textos">Esta Política de Privacidade destina-se a ajudar você a entender quais informações coletamos, porque as coletamos e como você pode atualizar, gerenciar, exportar e excluir essas informações.</p>
+        <h3>Informações Coletadas</h3>
+        <p class="textos">Coletamos informações para disponibilizar serviços melhores a todos os nossos usuários e para possibilitar o desenvolvimento da atividade, quais sejam:</p>
+        <ol id="lista">
+            <li><strong>E-mail:</strong> utilizado para validação da conta, envio da Nota Fiscal e informações adicionais;</li>
+            <li><strong>Senha:</strong> código secreto criado pelo usuário para acesso a Plataforma;</li>
+            <li><strong>Nome:</strong> coletado para identificação do usuário;</li>
+            <li><strong>Telefone:</strong> utilizado para facilitar a comunicação com o usuário;</li>
+            <li><strong>Data de nascimento:</strong> utilizado para confirmação da maioridade legal do usuário;</li>
+            <li><strong>Rua:</strong> coletado para identificar a rua do usuário;</li>
+            <li><strong>Número:</strong> coletado para identificar o número do local que será entregue a mercadoria;</li>
+            <li><strong>Bairro:</strong> coletado para identificar o bairro do usuário;</li>
+            <li><strong>CEP:</strong> coletado para identificar o CEP do usuário;</li>
+            <li class="texto" ><strong>UF:</strong> coletado para identificar o UF do usuário;</li>
+            <li class="texto"><strong>Cidade:</strong> coletado para identificar a Cidade do usuário;</li>
+            <li class="texto"><strong>Complemento:</strong> campo opcional, caso o usuário resida em apartamento.</li>
+        </ol>
+        <p class="textos">As informações coletadas são utilizadas para realização de estudos e classificação dos usuários para viabilizar melhores recomendações de produtos e conteúdo, que dependerão também de como você usa nossa Plataforma e de como gerencia os controles de privacidade.</p> <br>
+        <p class="textos">De tempos em tempos, podemos usar suas informações pessoais para enviar avisos importantes, como comunicações sobre alterações em nossos termos, condições e normas.</p><br>
+        <p class="textos">Podemos também usar informações pessoais para propósitos internos, como auditoria, análise de dados e pesquisa para melhorar os serviços e as comunicações de usuários.</p>
+        <h3>Conformidade com Leis</h3>
+        <p class="textos">A segurança das suas informações pessoais é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Nos esforçamos para adotar as melhores práticas de desenvolvimento bem como contratar os melhores fornecedores necessários para a realização de nossas atividades de forma segura para proteger suas Informações Pessoais, contudo não podemos garantir sua segurança absoluta.</p><br>
+        <p class="textos">Esta Política de Privacidade se aplica ao uso da Plataforma desenvolvida. <strong>Esta Política de Privacidade não se aplica a serviços que tenham políticas de privacidade separadas, de terceiros, que não incorporem esta Política de Privacidade.
+        </strong></p><br>
+        <p class="textos"><strong>Política de Privacidade não se aplica a:</strong></p>
+        <ul id="lista">
+            <li>Práticas de coleta de informações de outras empresas e organizações que anunciam nossos Serviços; </li>
+            <li>Serviços oferecidos por outras empresas ou indivíduos, inclusive produtos ou sites que podem incluir serviços da nossa plataforma, que são exibidos para você nos resultados da pesquisa ou tenham links em nossos serviços.</li>
+        </ul>
+        <p class="textos">Nossa Plataforma pode conter links para outros sites que não são operados por nós. Se você clicar em um link de terceiros, você será direcionado para o site desse terceiro. Recomendamos que você analise a Política de Privacidade de cada site que você visita, pois não temos controle e não assumimos qualquer responsabilidade pelo conteúdo, políticas de privacidade, serviços ou práticas de terceiros.</p><br>
+        <p class="textos"> A plataforma permite que você mantenha facilmente suas informações pessoais precisas, completas e atualizadas. Nós manteremos suas informações pessoais pelo período necessário para cumprir as finalidades descritas nesta Política de Privacidade e em nossos resumos de privacidade específicos. Para definir esses períodos, examinamos com cuidado a necessidade de coletar informações pessoais e, ao identificarmos uma  necessidade relevante, retemos a informação pelo período mais curto possível necessário para concluir a finalidade da coleta, a menos que um período de retenção mais longo seja exigido por lei.</p>
+    
+        <h3>Armazenamento e Processamento</h3>
+        <p class="textos">Ao se registrar e usar nossa Plataforma, você concorda com a transferência de informações, bem como com o uso e divulgação de informações sobre você, conforme descrito nesta Política de Privacidade. Usamos proteções para ajudar a manter seguras as informações coletadas por meio do Plataforma, de forma a tomar medidas para verificar a sua identidade antes de lhe conceder acesso suas informações.</p>
+    </div>
+    <footer class="nav-footer">
+        <div class="info-footer">
+            <a href="#">Termos e condições</a>
+            <a href="privacy-page.html">Como protegemos sua privacidade</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre</a>
+        </div>
+        <div id="chat">
+            <img id="icon-footer" src="../icons/message.svg" alt="chat">
+        </div>
+    </footer>
+</body>
+</html>
