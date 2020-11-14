@@ -1,6 +1,8 @@
 from flask import Blueprint, Response, request
 from bson import json_util
 from datetime import datetime
+from bson.objectid import ObjectId
+from src.model.utils.vault import Commands
 
 from src.model.account import Account as ModelAccount
 from src.model.address import Address as ModelAddress
@@ -14,30 +16,39 @@ def register():
     if request.method == 'POST':
         crypt_suite = Crypt()
         obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
-        # Realizar as validações
+        
         try:
             address = obj.pop("address")
             email = obj.pop("email")
             password = obj.pop("password")
 
-            account = crypt_suite.encrypt(json_util.dumps(obj)).decode('latin-1', 'replace')
-            email = crypt_suite.encrypt(email).decode('latin-1', 'replace')
-            password = crypt_suite.encrypt(password).decode('latin-1', 'replace')
+            pkAccount = ObjectId()
+            pkAddress = ObjectId()
 
-            address = crypt_suite.encrypt(json_util.dumps(address)).decode('latin-1', 'replace')
+            crypt_suite.encrypt_init(str(pkAccount))
+
+            account = crypt_suite.encrypt(str(pkAccount), json_util.dumps(obj)).decode('latin-1', 'replace')
+            email = crypt_suite.encrypt(str(pkAccount), email).decode('latin-1', 'replace')
+            password = crypt_suite.encrypt(str(pkAccount), password).decode('latin-1', 'replace')
+
+            address = crypt_suite.encrypt(str(pkAccount), json_util.dumps(address)).decode('latin-1', 'replace')
 
             addressObj = ModelAddress()
             addressObj.data = address
             addressObj = addressObj.save()
 
             accountObj = ModelAccount()
+            accountObj.vault_id = pkAccount
             accountObj.email = email
             accountObj.password = password
             accountObj.data = account
             accountObj.address = addressObj
             accountObj.save()
 
-            response = crypt_suite.encrypt(str(accountObj.id)).decode('latin-1', 'replace')
+            response = str(accountObj.id)
+
+            command = Commands()
+            command.seal()
 
             return Response(json_util.dumps({"id" : response}), mimetype="application/json", status=200)
 
@@ -59,11 +70,11 @@ def login():
             email = obj.pop("email")
             password = obj.pop("password")
 
-            accountObj = json_util.loads(ModelAccount.objects().only('email', 'password').to_json())
+            accountObj = json_util.loads(ModelAccount.objects().only('email', 'password', 'vault_id').to_json())
 
             for account in accountObj:
-                account['email'] = crypt_suite.decrypt(account['email']).decode('latin-1', 'replace')
-                account['password'] = crypt_suite.decrypt(account['password']).decode('latin-1', 'replace')
+                account['email'] = crypt_suite.decrypt(str(account['vault_id']), account['email']).decode('latin-1', 'replace')
+                account['password'] = crypt_suite.decrypt(str(account['vault_id']), account['password']).decode('latin-1', 'replace')
 
             email_list = list(filter(lambda account: account["email"] == email, accountObj))
 
@@ -73,7 +84,10 @@ def login():
             if email_list[0]['password'] != password:
                 return Response('{"Message":"Senha invalida"}', mimetype="application/json", status=404)
             
-            response = crypt_suite.encrypt(str(email_list[0]['_id'])).decode('latin-1', 'replace')
+            response = str(email_list[0]['_id'])
+
+            command = Commands()
+            command.seal()
 
             return Response(json_util.dumps({"id" : response}), mimetype="application/json", status=200)
 
@@ -89,18 +103,21 @@ def get_user():
     
     if request.method == 'POST':
         crypt_suite = Crypt()
-        obj = crypt_suite.decrypt(request.json['id']).decode('latin-1', 'replace')
+        obj = request.json['id']
 
         try:
             response_object = {}
             account = json_util.loads(ModelAccount.objects.get(id=obj).to_json())
-            objAccount = json_util.loads(crypt_suite.decrypt(account["data"]).decode('latin-1', 'replace'))
-            objAccount['email'] = crypt_suite.decrypt(account["email"]).decode('latin-1', 'replace')
+            objAccount = json_util.loads(crypt_suite.decrypt(str(account['vault_id']), account["data"]).decode('latin-1', 'replace'))
+            objAccount['email'] = crypt_suite.decrypt(str(account['vault_id']), account["email"]).decode('latin-1', 'replace')
 
             address = json_util.loads(ModelAddress.objects.get(id=str(account['address'])).to_json())
 
             response_object['account'] = crypt_suite.encrypt_front(json_util.dumps(objAccount)).decode('latin-1', 'replace')
-            response_object['address'] = crypt_suite.encrypt_front(crypt_suite.decrypt(address["data"]).decode('latin-1', 'replace')).decode('latin-1', 'replace')
+            response_object['address'] = crypt_suite.encrypt_front(crypt_suite.decrypt(str(account['vault_id']), address["data"]).decode('latin-1', 'replace')).decode('latin-1', 'replace')
+
+            command = Commands()
+            command.seal()
 
             return Response(json_util.dumps(response_object), mimetype="application/json", status=200)
 
@@ -117,18 +134,19 @@ def setUser():
     obj = json_util.loads(crypt_suite.decrypt_front(request.json['data']))
     
     try:
-        idUser = crypt_suite.decrypt(obj.pop("id")).decode('latin-1', 'replace')
+        idUser = obj.pop("id")
         address = obj.pop("address")
         email = obj.pop("email")
         password = obj.pop("password")
 
-        account = crypt_suite.encrypt(json_util.dumps(obj)).decode('latin-1', 'replace')
-        email = crypt_suite.encrypt(email).decode('latin-1', 'replace')
-        password = crypt_suite.encrypt(password).decode('latin-1', 'replace')
-        address = crypt_suite.encrypt(json_util.dumps(address)).decode('latin-1', 'replace')
+        accountObj = ModelAccount.objects.get(id=idUser)
+
+        account = crypt_suite.encrypt(str(accountObj["vault_id"]), json_util.dumps(obj)).decode('latin-1', 'replace')
+        email = crypt_suite.encrypt(str(accountObj["vault_id"]), email).decode('latin-1', 'replace')
+        password = crypt_suite.encrypt(str(accountObj["vault_id"]), password).decode('latin-1', 'replace')
+        address = crypt_suite.encrypt(str(accountObj["vault_id"]), json_util.dumps(address)).decode('latin-1', 'replace')
 
         
-        accountObj = ModelAccount.objects.get(id=idUser)
         accountObj.email = email
         accountObj.password = password
         accountObj.data = account
@@ -140,6 +158,10 @@ def setUser():
         
         accountObj.save()
         addressObj.save()
+
+        command = Commands()
+        command.seal()
+
         return Response(json_util.dumps({"Status" : "Success"}), mimetype="application/json", status=200)
 
 
@@ -152,8 +174,8 @@ def setUser():
 def del_user():
 
     crypt_suite = Crypt()
-    obj = crypt_suite.decrypt(request.json['id']).decode('latin-1', 'replace')
-
+    obj = request.json['id']
+ 
     try:
         account = ModelAccount.objects.get(id=obj)
     
