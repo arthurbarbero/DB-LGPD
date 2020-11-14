@@ -6,3 +6,4 @@ flask_cors
 python-dateutil
 gunicorn
 python-dateutil
+requests
