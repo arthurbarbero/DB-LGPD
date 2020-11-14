@@ -27,13 +27,13 @@ Nesta Sprint tivemos um grande avanço na criptografia, no interim entre a Sprin
     
     Após o usuário realizar o cadastro, seus dados vão para a rota ``/register`` e iniciam o método ``encrypt_init`` da classe ``Crypt``. Este método é responsável por vincular o id criado à chave de encriptação criada.
     
-    ![Register-Entrega](https://github.com/arthurbarbero/DB-LGPD/raw/crypt_by_user/images/Register-Entrega5.gif)
+    ![Register-Entrega](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/Register-Entrega5.gif)
     
   - **Logando / my profile**
     
     Quando logado, enviamos o id do usuário para realizar as buscas no banco de dados e assim com o id em mãos, resgatamos do **Vault** a sua cifra e deciframos os dados para devolver os dados ao Front.
     
-    ![GetUser-Entrega](https://github.com/arthurbarbero/DB-LGPD/raw/crypt_by_user/images/GetUser-Entrega5.gif)
+    ![GetUser-Entrega](https://github.com/arthurbarbero/DB-LGPD/raw/master/images/GetUser-Entrega5.gif)
     
         
     ### Deploy
