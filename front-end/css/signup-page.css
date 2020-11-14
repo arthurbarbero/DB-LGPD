@@ -239,3 +239,8 @@ textarea:focus, input:focus {
 .span{
     border-bottom: solid 1px red;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

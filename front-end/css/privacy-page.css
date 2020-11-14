@@ -62,3 +62,8 @@ li {
 p{
     color:#756e75;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

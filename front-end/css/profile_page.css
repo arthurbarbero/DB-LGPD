@@ -137,5 +137,9 @@ textarea:focus, input:focus, select:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
 
+a {
+    text-decoration: none;
+    color: #fff;
 }
