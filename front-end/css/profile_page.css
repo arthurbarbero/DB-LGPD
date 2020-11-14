@@ -105,3 +105,8 @@ textarea:focus, input:focus, select:focus {
     margin-top: 10px;
     color: #757575;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
