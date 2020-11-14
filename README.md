@@ -135,12 +135,13 @@ Após as entregas acima, utilizaremos desta sprint para finalizar o restante das
 
 ### Sprint 5 - 02/11 A 15/11:
 
-- Implementação de chave de criptografia por usuário (Back-end) :red_circle:
+- Implementação de chave de criptografia por usuário (Back-end) :red_circle: :heavy_check_mark:
   
   - Para tornar a criptografia entre o back-end e o banco de dados pessoais mais forte e segura, foi requisitado que fosse implementado algum tipo de chaves simétricas únicas por usuário. Utilizamos do serviço **Vault** para o armazenamento das mesmas.
   
-- Finalização da página privacy-page (Front-end) :large_blue_circle:
+- Finalização da página privacy-page (Front-end) :large_blue_circle: :heavy_check_mark:
 
+[Entrega 5](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega5.md)
 
 ### Sprint 6 - 16/11 A 29/11:
 
