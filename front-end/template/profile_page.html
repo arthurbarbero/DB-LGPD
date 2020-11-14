@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/front-end/css/index.css">
     <link rel="stylesheet" type="text/css" href="/front-end/css/profile_page.css">
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="../javaScript/utils/toasted.js"></script>
@@ -77,6 +78,10 @@
                 <input class="dados-conta" id="cidade" type="text" placeholder="Cidade:" disabled>
             </div>
         </section>
+        <div id="options-btn">
+            <input type="button" value="Deletar Conta" id="btn-delete" onclick="deleteAccount()"/>
+            <input type="button" value="Editar" id="btn-edit" onclick="editAccount()" >
+        </div>
     </section>
     <footer class="nav-footer">
         <div class="info-footer">

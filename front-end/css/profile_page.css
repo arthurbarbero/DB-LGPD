@@ -10,7 +10,7 @@ form.buttons {
     width: 420px;
 }
 
-.flex-conteiner{
+.flex-conteiner {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,6 +28,31 @@ form.buttons {
     margin-right: 50px;
 }
 
+#btn-edit {
+    width: 125px;
+    height: 40px;
+    background-color: #D8CEDF;
+    color: #4D4D65;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    margin-left: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+#btn-delete {
+    width: 125px;
+    height: 40px;
+    background-color: #4D4D65;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    font-size: 16px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
 .icon-header {
     width: 25px;
     height: 25px;
@@ -37,12 +62,12 @@ form.buttons {
     margin-top: 4px;
 }
 
-.meu-perfil{
+.meu-perfil {
     display: flex;
     width: 100%;
 }
 
-#meus-dados{
+#meus-dados {
     margin-left: 120px;
     color: #4D4D65;
     margin-top: 40px;
@@ -62,7 +87,7 @@ hr {
     font-size: 25px;
 }
 
-.container-dados{
+.container-dados {
     display:flex;
     flex-direction: column;
     background: white;
@@ -99,9 +124,18 @@ textarea:focus, input:focus, select:focus {
     outline: 0;
 }
 
-.input_nasc{
+.input_nasc {
     font-size: 20px;
     height: 30px;
     margin-top: 10px;
     color: #757575;
+}
+
+#options-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
 }
