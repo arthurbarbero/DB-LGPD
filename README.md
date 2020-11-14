@@ -175,7 +175,7 @@ Tecnologias empregadas
 
   Utilizamos a tríade do front-end para construir de forma simples uma interface para simular um cadastro do usuário.
   
-  Dentro do projeto de front-end criamos um arquivo JavaScript para manipular as interações com métodos de criptografia, [o arquivo pode ser analizado clicando aqui](https://github.com/arthurbarbero/DB-LGPD/blob/master/front-end/javaScript/utils/cript.js).
+  Dentro do projeto de front-end criamos um arquivo JavaScript para manipular as interações com métodos de criptografia, [o arquivo pode ser analisado clicando aqui](https://github.com/arthurbarbero/DB-LGPD/blob/master/front-end/javaScript/utils/cript.js).
   
   O arquivo cript.js utiliza a biblioteca [CryptoJS](https://github.com/brix/crypto-js), fazendo uso de seus métodos ``AES.encrypt`` e ``AES.decrypt``, recebemos uma 'String' e criptografamos utilizando um bloco IV gerado aleatoriamente, uma chave de tamanho 256 bits que está armazenada no mesmo arquivo e o método ``CryptoJS.mode.CBC`` que realiza a combinação de cifras anteriores, conforme mencionada no tópico de Técnicas utilizadas.
   
