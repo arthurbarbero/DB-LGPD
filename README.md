@@ -1,14 +1,14 @@
 # DB-LGPD
 
 ## Membros: :memo:
-- Arthur Barbero - [Github](https://github.com/arthurbarbero);
-- Érica dos Santos Moreira da Rosa - [Github](https://github.com/EricaSantos2109);
-- Felippe Alves - [Github](https://github.com/FelippeAlves);
-- Gabriel Augusto Landim - [Github](https://github.com/Glandim);
-- José Vinicius Ferreira Santana - [Github](https://github.com/JViniciusF);
-- Nayara Lorrane Santos Silveira - [Github](https://github.com/nayaralorrane);
-- Stephanie Costa Vale Moura - [Github](https://github.com/Stephanie345);
-- Thyago Odorico Garcia - [Github](https://github.com/togarci).
+- Arthur Barbero - [Github](https://github.com/arthurbarbero) / [LinkedIn](https://www.linkedin.com/in/arthur-barbero/);
+- Érica dos Santos Moreira da Rosa - [Github](https://github.com/EricaSantos2109) / [LinkedIn](https://www.linkedin.com/in/%C3%A9rica-santos-2ab73516b/);
+- Felippe Alves - [Github](https://github.com/FelippeAlves) / [LinkedIn](https://www.linkedin.com/in/felippe-alves-de-paula/);
+- Gabriel Augusto Landim - [Github](https://github.com/Glandim) / [LinkedIn](https://www.linkedin.com/in/gabriel-landim-2b5bb8181/);
+- José Vinicius Ferreira Santana - [Github](https://github.com/JViniciusF) / [LinkedIn](https://www.linkedin.com/in/jose-vinicius-ferreira-santana-903239181/);
+- Nayara Lorrane Santos Silveira - [Github](https://github.com/nayaralorrane) / [LinkedIn](https://www.linkedin.com/in/nayara-lorrane-765400157/);
+- Stephanie Costa Vale Moura - [Github](https://github.com/Stephanie345) / [LinkedIn](https://www.linkedin.com/in/steph%C3%A1nie-c-349b7b103/);
+- Thyago Odorico Garcia - [Github](https://github.com/togarci) / [LinkedIn](https://www.linkedin.com/in/thyago-garcia-10ab8a11a/);
 
 Objetivos: :dart:
 ----------------
@@ -54,9 +54,12 @@ Para isto utilizaremos a criptografia do padrão AES (Advanced Encryption System
  
   O algoritmo foi criado por Vincent Rijmen e Joan Daemen, primeiramente com o nome de Rijndael, vencendo o concurso do NIST (National Institute of Standards and Technology) em 1997, que passaria a se chamar AES, o mesmo atendeu a todas as exigências do concurso sendo o melhor em segurança, flexibilidade, bom desempenho em softwares e hardwares.
   
+  Dentre as criptografias mais conhecidas, optamos por se utilizar da AES pelo fato de estar entre as maiores criptografias de blocos, podendo-se utilizar de chaves de até 256 bits. Entre os concorrentes mais conhecidos temos o DES que é muito velho e ja está praticamente mapeado, o 3DES que é uma implementação de DES em cascata, criando três instâncias do DES com chaves distintas, mas se prova um algorítmo muito lento em comparação as outras. Blowfish é um algorítmo que concorreu no mesmo concurso em que o AES foi vencedor, se destaca pela sua rapidez porém o tamanho dos blocos são de apenas 64 bits.
+  
   
  - Método CBC (Cypher Block Chaining)
- 
+  
+  Dentre os métodos de criptografia AES, utilzamos o método CBC por ser o mais confiável e aleatório possível. Métodos como o BCE (Eletronic Codebook), utilizam apenas a chave para a realização da criptografia, tornando a criptografia de um mesmo dado, se realizado duas vezes, idênticos entre si. O método CFB (Cipher feedback) utiliza-se de um bloco de inicialização, trazendo uma aleatoriedade ao processo, porém, expõe o conteudo a ser cifrado.
  
   Antes de aprofundarmos no método, primeiramente devemos entender o conceito de bloco IV.
   
@@ -145,7 +148,11 @@ Após as entregas acima, utilizaremos desta sprint para finalizar o restante das
 
 ### Sprint 6 - 16/11 A 29/11:
 
-Reservada para possíveis consertos e criação da apresentação final. :large_blue_circle:
+Reservada para possíveis consertos e criação da apresentação final. :large_blue_circle: :heavy_check_mark:
+- Criação do vídeo para a apresentação final. :heavy_check_mark:
+- Exemplificação sobre a criptografia utilizada. :heavy_check_mark:
+
+[Entrega 6](https://github.com/arthurbarbero/DB-LGPD/blob/master/Entrega6.md)
 
 Tecnologias empregadas
 -------------
