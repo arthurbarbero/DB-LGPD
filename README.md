@@ -5,7 +5,7 @@
 - Érica dos Santos Moreira da Rosa - [Github](https://github.com/EricaSantos2109) / [LinkedIn](https://www.linkedin.com/in/%C3%A9rica-santos-2ab73516b/);
 - Felippe Alves - [Github](https://github.com/FelippeAlves) / [LinkedIn](https://www.linkedin.com/in/felippe-alves-de-paula/);
 - Gabriel Augusto Landim - [Github](https://github.com/Glandim) / [LinkedIn](https://www.linkedin.com/in/gabriel-landim-2b5bb8181/);
-- José Vinicius Ferreira Santana - [Github](https://github.com/JViniciusF) / [LinkedIn]();
+- José Vinicius Ferreira Santana - [Github](https://github.com/JViniciusF) / [LinkedIn](https://www.linkedin.com/in/jose-vinicius-ferreira-santana-903239181/);
 - Nayara Lorrane Santos Silveira - [Github](https://github.com/nayaralorrane) / [LinkedIn](https://www.linkedin.com/in/nayara-lorrane-765400157/);
 - Stephanie Costa Vale Moura - [Github](https://github.com/Stephanie345) / [LinkedIn](https://www.linkedin.com/in/steph%C3%A1nie-c-349b7b103/);
 - Thyago Odorico Garcia - [Github](https://github.com/togarci) / [LinkedIn](https://www.linkedin.com/in/thyago-garcia-10ab8a11a/);
