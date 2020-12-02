@@ -230,7 +230,7 @@ Features
   A pedido do usuário, o back-end realizará a exclusão permanente dos dados em posse referente ao cliente, lembrando que neste quesito não abordaremos todos os riscos que uma empresa necessitaria para realizar as devidas exclusões atendendo todos os tópicos da LGPD que abordam a deleção de dados pessoais, somente uma forma de exclusão simples;
   
   
-## [Banco de dados: :books:](https://github.com/arthurbarbero/DB-LGPD/tree/master/bd)
+## [Banco de dados: :books:](https://github.com/arthurbarbero/DB-LGPD/tree/master/db)
   
   Moldado às necessidades acima, realizaremos a criação de um banco de dados exclusivo para o tratamento de dados pessoais. Além de serem armazenados somente dados criptografados, o acesso ao banco também será protegido via chaves SSH, permitindo apenas que a aplicação do Back-end realize leituras e escreva neste banco de dados.
   
